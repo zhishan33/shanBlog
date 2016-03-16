@@ -28,33 +28,33 @@ use two for __use two ubderscrores instead__
 ---
 上面的是一条分割线
 
-*li
-*li
-*li
+* li
+* li
+* li
 
 两个列表之间不能响铃，不然会被解释为嵌套
 
-+li
-+i
-+li
++ li
++ i
++ li
 
--li
--li
--li
+- li
+- li
+- li
 
 ###ol
 
-1.li
-2.il
-3.li
+1. li
+2. il
+3. li
 
 ###p
 
-*li
+* li
 
 ppppppppppppp
 
-*li
+* li
 
 ###link
 this is [example link](www.example.com)
