@@ -25,10 +25,14 @@ use two for **strong**.
 use two for __use two ubderscrores instead__
 
 ###ul
+---
+上面的是一条分割线
 
 *li
 *li
 *li
+
+两个列表之间不能响铃，不然会被解释为嵌套
 
 +li
 +i
