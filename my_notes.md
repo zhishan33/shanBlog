@@ -24,7 +24,7 @@ Some of these worlds _are also_.
 use two for **strong**.
 use two for __use two ubderscrores instead__
 
-***ul
+###ul
 *li
 *li
 *li
@@ -34,37 +34,37 @@ use two for __use two ubderscrores instead__
 -li
 -li
 -li
-***ol
+###ol
 1.li
 2.il
 3.li
-***p
+###p
 *li
 
 ppppppppppppp
 
 *li
 
-***link
+###link
 this is [example link](www.example.com)
 
-***link2
+###link2
 i get 10 times more traffic from [Google][1] than from [Yahoo][2] or [MSN][3]
 
 [1]:http://google.com
 [2]:http://search.com
 [3]:http://search.msn.com
 
-***img
+###img
 ![alt text](/path/to/img.jpg 'title')
 
 ![alt text][id]
 [id]:/path/to/img.jpg 'title'
 
-***code
+###code
 I strongly recommend against using any `<blink>` tags.
 
-***tab
+###tab
     
     <p>for example<p>
     <blockquote>
