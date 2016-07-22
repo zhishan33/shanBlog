@@ -6,82 +6,185 @@
 
 >在循环之前给元素标记一种状态，然后执行循环体每一次循环都有一次**ajax**请求，循环结束之后恢复元素状态。
 
+###代码块
+>html
+
+	<ul>
+		<li><button id="getinfo">获取信息</button></li>
+		<li><button id="getnext">获取下一个</button></li>
+		<li id="info">
+			<p>信息替换</p>
+			<p>信息替换</p>
+			<p>信息替换</p>
+		</li>
+	</ul>
+
+>**循环开始之前运行的方法** 
+
+	function ajaxStart() {
+		console.log("ajaxStart");
+		$("#getnext").html("获取中。。。");
+	}
+>**循环体** ajax同步
+
+	function ajaxMain() {
+		$('p').each(function() {
+			//setTimeout(function() {
+				$.ajax({
+					type: "get",
+					url: "../json/js_asyn.json",
+					async: false,
+					success: function(data) {
+						console.log('ajaxMain');
+					}
+				});
+			//}, 2000);
+		});
+	}
+>**循环结束** 
+
+	function ajaxEnd() {
+		console.log('ajaxEnd');
+		$("#getnext").html("获取成功");
+	}
+>**执行代码**
+
+	$("#getnext").click(function() {
+		ajaxStart();
+		ajaxMain();
+		ajaxEnd();
+	});
+>输出结果   UI渲染过程的效果不明显 ，**实际上UI渲染被阻塞$('getnext').html('获取中。。。')不能及时更新，而是等待ajaxMain函数打印完结果后再执行。必须让ajaxMain延时执行，UI才能及时更新，$('getnext').html('获取中。。。')可立即执行，同时ajaxEnd也会跟着执行。最后执行ajaxMain。**
+
+	"ajaxStart"	
+	"ajaxMain"	
+	"ajaxMain"	
+	"ajaxMain"
+	"ajaxEnd"	
+>如果ajax异步   输出结果   UI渲染过程的效果不明显
+
+	"ajaxStart"	
+	"ajaxEnd"	
+	"ajaxMain"	
+	"ajaxMain"	
+	"ajaxMain"
+
+>如果ajax延时2s执行  输出结果
+
+	"ajaxStart"	
+	"ajaxEnd"	
+	"ajaxMain"	
+	"ajaxMain"	
+	"ajaxMain"
+
+>如何才能在ajaxMain全部执行完之后再执行ajaxEnd？直接把ajaxEnd放到ajax成功时的代码内，肯定不行，第一次成功就会执行ajaxEnd，必须在每一次成功时记录一次状态，并在下一次成功时获取这个状态，直到传递到最后一个ajax成功时再执行ajaxEnd。
+
+----------------------
+>**最后ajaxMian**
+
+	function ajaxMain() {
+		var num = 0;
+		var plen = $("p").length;
+		$('p').each(function() {
+			var self = $(this);
+			setTimeout(function() {
+				$.ajax({
+					type: "get",
+					url: "../json/js_asyn.json",
+					async: false,
+					success: function(data) {
+						console.log('ajaxMain');
+						self.html('替换成功');
+						num = ++num;
+						if (num = plen) {
+							ajaxEnd();
+						}
+					}
+				});
+			}, 200);
+		});
+	}
+
 ##参考了以下代码，复习了ajax同步异步编程知识
 
 ###代码块
-<div id="output"></div>
-<button onclick="updateSync ()">Run Sync</button>
-<button onclick="updateAsync ()">Run Async</button>
+>html
 
-function updateSync() {
+	<div id="output"></div>
+	<button onclick="updateSync ()">Run Sync</button>
+	<button onclick="updateAsync ()">Run Async</button>
+>js
 
-    for (var i = 0; i < 1000; i++) {
-        document.getElementById('output').innerHTML = i;
-    }
-    
-}
-function updateAsync() {
-
-    var i = 0;
-    function updateLater() {
-        document.getElementById('output').innerHTML = (i++);
-        if (i < 1000) {
-            setTimeout(updateLater, 0);
-        }
-    }
-    updateLater();
-    
-}
+	function updateSync() {
+	
+	    for (var i = 0; i < 1000; i++) {
+	        document.getElementById('output').innerHTML = i;
+	    }
+	    
+	}
+	function updateAsync() {
+	
+	    var i = 0;
+	    function updateLater() {
+	        document.getElementById('output').innerHTML = (i++);
+	        if (i < 1000) {
+	            setTimeout(updateLater, 0);
+	        }
+	    }
+	    updateLater();
+	    
+	}
 
 >由于js是单线程的所以运行updateSync函数导致UI更新被阻塞，setTimeout让updateLater函数异步执行，可以看到看到UI界面上从0到999快速地更新过程。
 
 ###代码块
-function synchronizedCode() {
+	function synchronizedCode() {
+	
+	    var last = new Date().getTime();
+	    var count = 0;
+	    while (true) {
+	        var now = new Date().getTime();
+	        if (now - last > 1000 * 2) {
+	            last = now;
+	            count++;
+	            console.log('the '+count+'th count');
+	        }
+	        if (count > 5) {
+	            console.log('exist while.');
+	            break;
+	        }
+	    }
+	    
+	}
 
-    var last = new Date().getTime();
-    var count = 0;
-    while (true) {
-        var now = new Date().getTime();
-        if (now - last > 1000 * 2) {
-            last = now;
-            count++;
-            console.log('the '+count+'th count');
-        }
-        if (count > 5) {
-            console.log('exist while.');
-            break;
-        }
-    }
-    
-}
-
-(function() {
-
-    setTimeout(function() {console.log('setTimeout 0 occured first.');},0);
-    setTimeout(function() {console.log('setTimeout 0 occured second.');},0);
-    
-    synchronizedCode();
-    
-})();
+	(function() {
+	
+	    setTimeout(function() {console.log('setTimeout 0 occured first.');},0);
+	    setTimeout(function() {console.log('setTimeout 0 occured second.');},0);
+	    
+	    synchronizedCode();
+	    
+	})();
 
 ###输出结果
-the 1th count.
-
-the 2th count.
-
-the 3th count.
-
-the 4th count.
-
-the 5th count.
-
-exist while.
-
-setTimeout 0 occured first.
-
-setTimeout 0 occured second.
+	the 1th count.
+	
+	the 2th count.
+	
+	the 3th count.
+	
+	the 4th count.
+	
+	the 5th count.
+	
+	exist while.
+	
+	setTimeout 0 occured first.
+	
+	setTimeout 0 occured second.
 
 >使用setTimeout函数时，尽管延时为0，js的执行顺序还是发生了改变。
+
 
 
 
