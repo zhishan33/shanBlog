@@ -1,31 +1,37 @@
----
-layout: default
-title:我的blog
+--- 
+layout: default 
+title:我的blog 
 ---
 
 <div class="home">
 	<p>{{ page.title }}</p>
-  <!--<h1 class="page-heading">Posts</h1>-->
-  <h1 class="page-heading">最新文章</h1>
+	<!--<h1 class="page-heading">Posts</h1>-->
+	<!--<h1 class="page-heading">最新文章</h1>-->
+	<h2>
+<a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>最新文章</h2>
 
-  <ol class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+	<ol class="post-list">
+		{% for post in site.posts %}
+		<li>
+			<span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
 
-        <h2>
+			<h2>
           <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title | escape }}</a>
         </h2>
-      </li>
-    {% endfor %}
-  </ol>
+		</li>
+		{% endfor %}
+	</ol>
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+	<p class="rss-subscribe">subscribe
+		<a href="{{ " /feed.xml " | prepend: site.baseurl }}">via RSS</a>
+	</p>
 	<article>
-  <ol>
-    <li>
-      <a href="http://zhishan33.github.io/shanBlog/2016-09-01-re-nore.md">正则表达式匹配连续数字和重复数字</a>
-    </li>
-  </ol>
-</article>
+		<h3>
+<a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>文章里表</h3>
+		<ol>
+			<li>
+				<a href="http://zhishan33.github.io/shanBlog/2016-09-01-re-nore.md">正则表达式匹配连续数字和重复数字</a>
+			</li>
+		</ol>
+	</article>
 </div>
