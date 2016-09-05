@@ -4,8 +4,9 @@ title:我的blog
 ---
 
 <div class="home">
-
-  <h1 class="page-heading">Posts</h1>
+	<p>{{ page.title }}</p>
+  <!--<h1 class="page-heading">Posts</h1>-->
+  <h1 class="page-heading">最新文章</h1>
 
   <ol class="post-list">
     {% for post in site.posts %}
