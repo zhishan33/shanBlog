@@ -7,7 +7,7 @@ title:我的blog
 
   <h1 class="page-heading">Posts</h1>
 
-  <ul class="post-list">
+  <ol class="post-list">
     {% for post in site.posts %}
       <li>
         <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
@@ -17,7 +17,7 @@ title:我的blog
         </h2>
       </li>
     {% endfor %}
-  </ul>
+  </ol>
 
   <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
 	<article>
