@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>学习笔记</title>
+    <description>学习总结 思考感悟 知识管理</description>
+    <link>http://example.com/shanBlog/</link>
+    <atom:link href="http://example.com/shanBlog/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Tue, 06 Sep 2016 16:17:02 +0800</pubDate>
+    <lastBuildDate>Tue, 06 Sep 2016 16:17:02 +0800</lastBuildDate>
+    <generator>Jekyll v3.2.1</generator>
+    
+      <item>
+        <title>learn Welcome to Jekyll!</title>
+        <description>&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+
+&lt;p&gt;To add new posts, simply add a file in the &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code class=&quot;highlighter-rouge&quot;&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
+
+&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Tom'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints 'Hi, Tom' to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;
+
+</description>
+        <pubDate>Mon, 05 Sep 2016 13:19:07 +0800</pubDate>
+        <link>http://example.com/shanBlog/jekyll/update/2016/09/05/welcome-to-jekyll.html</link>
+        <guid isPermaLink="true">http://example.com/shanBlog/jekyll/update/2016/09/05/welcome-to-jekyll.html</guid>
+        
+        
+        <category>jekyll</category>
+        
+        <category>update</category>
+        
+      </item>
+    
+      <item>
+        <title>你好，世界</title>
+        <description>&lt;p&gt;　　&amp;lt;h2&amp;gt;你好，世界&amp;lt;/h2&amp;gt;&lt;/p&gt;
+
+&lt;p&gt;　　&amp;lt;p&amp;gt;我的第一篇文章&amp;lt;/p&amp;gt;&lt;/p&gt;
+
+&lt;p&gt;　　&amp;lt;p&amp;gt;05 Sep 2016&amp;lt;/p&amp;gt;&lt;/p&gt;
+</description>
+        <pubDate>Mon, 05 Sep 2016 00:00:00 +0800</pubDate>
+        <link>http://example.com/shanBlog/2016/09/05/test.html</link>
+        <guid isPermaLink="true">http://example.com/shanBlog/2016/09/05/test.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>正则表达式</title>
+        <description>&lt;h2 id=&quot;section&quot;&gt;正则表达式&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;匹配重复数字&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;匹配连续数字&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;section-1&quot;&gt;匹配重复数字&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;script type=&quot;text/javascript&quot;&amp;gt;
+var reText = &quot;22222&quot;,
+	reText1 = &quot;aaaa&quot;;
+	/^(\w)\1{4,13}$/.test(reText) //true
+	/^(\w)\1{4,13}$/.test(reText1) //true
+			
+&amp;lt;/script&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;section-2&quot;&gt;匹配字符串中的重复字母或数字&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;script type=&quot;text/javascript&quot;&amp;gt;
+var reText = &quot;22222&quot;,
+	reText1 = &quot;aaaa&quot;;
+	/^(\w)*(\d)\2{2}(\w)*$/.test(reText) //true 匹配重复大于3位及以上
+	/^(\w)*(a-Z)\2{2}(\w)*$/.test(reText1) //true
+			
+&amp;lt;/script&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;section-3&quot;&gt;匹配连续数字&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;script type=&quot;text/javascript&quot;&amp;gt;
+var reText = &quot;12345&quot;,
+	reText1 = &quot;876543&quot;;
+	/^(?:0(?=1)|1(?=2)|2(?=3)|3(?=4)|4(?=5)|5(?=6)|6(?=7)|7(?=8)|8(?=9)|9(?=0))+\d$/.test(reText) //true
+	/^(?:9(?=8)|8(?=7)|7(?=6)|6(?=5)|5(?=4)|4(?=3)|3(?=2)|2(?=1)|1(?=0)|0(?=0))+\d$/.test(reText1) //true
+			
+&amp;lt;/script&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;01 Sep 2016&lt;/p&gt;
+</description>
+        <pubDate>Thu, 01 Sep 2016 00:00:00 +0800</pubDate>
+        <link>http://example.com/shanBlog/2016/09/01/re-note.html</link>
+        <guid isPermaLink="true">http://example.com/shanBlog/2016/09/01/re-note.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>js中ajax的异步执行与同步执行</title>
+        <description>&lt;p&gt;#js中ajax的异步执行与同步执行&lt;/p&gt;
+
+&lt;p&gt;@(笔记)[ajax]&lt;/p&gt;
+
+&lt;p&gt;##工作中的问题&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;在循环之前给元素标记一种状态，然后执行循环体每一次循环都有一次&lt;strong&gt;ajax&lt;/strong&gt;请求，循环结束之后恢复元素状态。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;###代码块&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;html&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;ul&amp;gt;
+	&amp;lt;li&amp;gt;&amp;lt;button id=&quot;getinfo&quot;&amp;gt;获取信息&amp;lt;/button&amp;gt;&amp;lt;/li&amp;gt;
+	&amp;lt;li&amp;gt;&amp;lt;button id=&quot;getnext&quot;&amp;gt;获取下一个&amp;lt;/button&amp;gt;&amp;lt;/li&amp;gt;
+	&amp;lt;li id=&quot;info&quot;&amp;gt;
+		&amp;lt;p&amp;gt;信息替换&amp;lt;/p&amp;gt;
+		&amp;lt;p&amp;gt;信息替换&amp;lt;/p&amp;gt;
+		&amp;lt;p&amp;gt;信息替换&amp;lt;/p&amp;gt;
+	&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;循环开始之前运行的方法&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;function ajaxStart() {
+	console.log(&quot;ajaxStart&quot;);
+	$(&quot;#getnext&quot;).html(&quot;获取中。。。&quot;);
+} &amp;gt;**循环体** ajax同步
+
+function ajaxMain() {
+	$('p').each(function() {
+		//setTimeout(function() {
+			$.ajax({
+				type: &quot;get&quot;,
+				url: &quot;../json/js_asyn.json&quot;,
+				async: false,
+				success: function(data) {
+					console.log('ajaxMain');
+				}
+			});
+		//}, 2000);
+	});
+} &amp;gt;**循环结束** 
+
+function ajaxEnd() {
+	console.log('ajaxEnd');
+	$(&quot;#getnext&quot;).html(&quot;获取成功&quot;);
+} &amp;gt;**执行代码**
+
+$(&quot;#getnext&quot;).click(function() {
+	ajaxStart();
+	ajaxMain();
+	ajaxEnd();
+}); &amp;gt;输出结果   UI渲染过程的效果不明显 ，**实际上UI渲染被阻塞$('getnext').html('获取中。。。')不能及时更新，而是等待ajaxMain函数打印完结果后再执行。必须让ajaxMain延时执行，UI才能及时更新，$('getnext').html('获取中。。。')可立即执行，同时ajaxEnd也会跟着执行。最后执行ajaxMain。**
+
+&quot;ajaxStart&quot;	
+&quot;ajaxMain&quot;	
+&quot;ajaxMain&quot;	
+&quot;ajaxMain&quot;
+&quot;ajaxEnd&quot;	 &amp;gt;如果ajax异步   输出结果   UI渲染过程的效果不明显
+
+&quot;ajaxStart&quot;	
+&quot;ajaxEnd&quot;	
+&quot;ajaxMain&quot;	
+&quot;ajaxMain&quot;	
+&quot;ajaxMain&quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;如果ajax延时2s执行  输出结果&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&quot;ajaxStart&quot;	
+&quot;ajaxEnd&quot;	
+&quot;ajaxMain&quot;	
+&quot;ajaxMain&quot;	
+&quot;ajaxMain&quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;如何才能在ajaxMain全部执行完之后再执行ajaxEnd？直接把ajaxEnd放到ajax成功时的代码内，肯定不行，第一次成功就会执行ajaxEnd，必须在每一次成功时记录一次状态，并在下一次成功时获取这个状态，直到传递到最后一个ajax成功时再执行ajaxEnd。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;最后ajaxMian&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;function ajaxMain() {
+	var num = 0;
+	var plen = $(&quot;p&quot;).length;
+	$('p').each(function() {
+		var self = $(this);
+		setTimeout(function() {
+			$.ajax({
+				type: &quot;get&quot;,
+				url: &quot;../json/js_asyn.json&quot;,
+				async: false,
+				success: function(data) {
+					console.log('ajaxMain');
+					self.html('替换成功');
+					num = ++num;
+					if (num = plen) {
+						ajaxEnd();
+					}
+				}
+			});
+		}, 200);
+	});
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;##参考了以下代码，复习了ajax同步异步编程知识&lt;/p&gt;
+
+&lt;p&gt;###代码块&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;html&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;div id=&quot;output&quot;&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;button onclick=&quot;updateSync ()&quot;&amp;gt;Run Sync&amp;lt;/button&amp;gt;
+&amp;lt;button onclick=&quot;updateAsync ()&quot;&amp;gt;Run Async&amp;lt;/button&amp;gt; &amp;gt;js
+
+function updateSync() {
+
+    for (var i = 0; i &amp;lt; 1000; i++) {
+        document.getElementById('output').innerHTML = i;
+    }
+    
+}
+function updateAsync() {
+
+    var i = 0;
+    function updateLater() {
+        document.getElementById('output').innerHTML = (i++);
+        if (i &amp;lt; 1000) {
+            setTimeout(updateLater, 0);
+        }
+    }
+    updateLater();
+    
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;由于js是单线程的所以运行updateSync函数导致UI更新被阻塞，setTimeout让updateLater函数异步执行，可以看到看到UI界面上从0到999快速地更新过程。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;###代码块
+	function synchronizedCode() {&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    var last = new Date().getTime();
+    var count = 0;
+    while (true) {
+        var now = new Date().getTime();
+        if (now - last &amp;gt; 1000 * 2) {
+            last = now;
+            count++;
+            console.log('the '+count+'th count');
+        }
+        if (count &amp;gt; 5) {
+            console.log('exist while.');
+            break;
+        }
+    }
+    
+}
+
+(function() {
+
+    setTimeout(function() {console.log('setTimeout 0 occured first.');},0);
+    setTimeout(function() {console.log('setTimeout 0 occured second.');},0);
+    
+    synchronizedCode();
+    
+})();
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;###输出结果
+	the 1th count.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;the 2th count.
+
+the 3th count.
+
+the 4th count.
+
+the 5th count.
+
+exist while.
+
+setTimeout 0 occured first.
+
+setTimeout 0 occured second.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;使用setTimeout函数时，尽管延时为0，js的执行顺序还是发生了改变。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;##参考文件&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://echizen.github.io/tech/2016/03-05-asynchronous&quot;&gt;js中的异步执行时间探究&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://software.intel.com/zh-cn/articles/asynchronized-javascript-programming&quot;&gt;JavaScript异步编程&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://blog.whyun.com/posts/js/&quot;&gt;js异步之惑&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;22 Jul 2016&lt;/p&gt;
+</description>
+        <pubDate>Fri, 22 Jul 2016 00:00:00 +0800</pubDate>
+        <link>http://example.com/shanBlog/2016/07/22/js-asyn.html</link>
+        <guid isPermaLink="true">http://example.com/shanBlog/2016/07/22/js-asyn.html</guid>
+        
+        
+      </item>
+    
+  </channel>
+</rss>

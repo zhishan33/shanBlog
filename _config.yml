@@ -31,7 +31,7 @@ language: zh-CN
 
 
 baseurl: "/shanBlog" # the subpath of your site, e.g. /blog
-encoding:utf-8
+encoding: utf-8
 url: "http://example.com" # the base hostname & protocol for your site
 twitter_username: jekyllrb
 github_username:  jekyll
