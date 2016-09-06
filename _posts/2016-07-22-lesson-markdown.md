@@ -1,3 +1,7 @@
+---
+layout: default
+title: markdown学习笔记（二）
+---
 # 欢迎使用马克飞象
 
 @(示例笔记本)[马克飞象|帮助|Markdown]
