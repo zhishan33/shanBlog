@@ -2,12 +2,12 @@
 layout: default 
 title: shan blog 
 ---
-<head>
-	<meta charset="utf-8" />
-	<title>首页</title>
+<!--<head>-->
+	<!--<meta charset="utf-8" />-->
+	<!--<title>首页</title>-->
 	<!--<link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">-->
 	<!--<link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">-->
-</head>
+<!--</head>-->
 <!--<section class="page-header">
 	<h1 class="project-name">Shanblog</h1>
 	<h2 class="project-tagline">Front end Engineer</h2>
@@ -26,17 +26,16 @@ title: shan blog
 		{% for post in site.posts %}
 		<li>
 			<span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-			<h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title | escape }}</a>
-        </h2>
+			<h3>
+	          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title | escape }}</a>
+	        </h3>
 		</li>
 		{% endfor %}
 	</ol>
 
-	<p class="rss-subscribe">subscribe
+	<!--<p class="rss-subscribe">subscribe
 		<a href="{{ " /feed.xml " | prepend: site.baseurl }}">via RSS</a>
-	</p>
+	</p>-->
 	<article>
 		<h3>
 <a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>其他文档</h3>
