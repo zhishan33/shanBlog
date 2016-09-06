@@ -37,8 +37,8 @@ twitter_username: jekyllrb
 github_username:  jekyll
 
 # Build settings
-#markdown: kramdown
-markdown: rdiscount
+markdown: kramdown
+#markdown: rdiscount
 # Markdown
 ## https://github.com/chjj/marked
 theme: minima
