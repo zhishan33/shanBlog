@@ -25,4 +25,4 @@ title: webpack config
 6. **--config** 指定配置文件
 
 ## 参考文件
-- [介绍 | React Webpack 小书](https://fakefish.github.io/react-webpack-cookbook/Running-a-workflow.html)
+- [介绍  React Webpack 小书](https://fakefish.github.io/react-webpack-cookbook/Running-a-workflow.html)
