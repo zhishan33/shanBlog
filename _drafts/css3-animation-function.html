@@ -1,0 +1,169 @@
+--- layout: default title: css3动画函数 categories: css3 ---
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>css3 动画函数</title>
+		<style type="text/css">
+			body {
+				font-family: sans-serif;
+				background: url("https://pixabay.com/get/17ad64c7676cf4b5be0f/1443888884/pipeline-918414_1280.jpg?direct"), linear-gradient(10deg, #20392B, #7F99BE), no-repeat #7F99BE scroll;
+				background-color: #fff;
+				background-position: top;
+				background-repeat: no-repeat;
+				background-size: cover;
+				padding: 0;
+				margin: 0;
+			}
+			
+			header {
+				float: left;
+				display: block;
+				margin-right: 2.35765%;
+				width: 100%;
+			}
+			
+			header:last-child {
+				margin-right: 0;
+			}
+			
+			header nav {
+				text-align: center;
+			}
+			
+			header nav ul {
+				list-style-type: none;
+				padding: 0;
+				margin-top: 30px;
+			}
+			
+			header nav li {
+				padding: 1em 0;
+			}
+			
+			header nav li:hover {
+				background: #000;
+				color: #fff;
+			}
+			
+			header nav li a {
+				letter-spacing: 0.2em;
+				text-transform: uppercase;
+				font-weight: bold;
+				cursor: pointer;
+			}
+			
+			.menu {
+				position: absolute;
+				left: 1em;
+				top: 1em;
+			}
+			
+			#side-menu {
+				box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24);
+				position: absolute;
+				height: 100%;
+				width: 320px;
+				top: 0;
+				left: 0;
+				overflow: scroll;
+				background: #fff;
+				transition: all 0.3s linear;
+				transition: all 0.3s cubic-bezier(.05, .69, .14, 1);
+				-webkit-transform: translateX(-320px);
+				-moz-transform: translateX(-320px);
+				-ms-transform: translateX(-320px);
+				-o-transform: translateX(-320px);
+				transform: translateX(-320px);
+			}
+			
+			.sideMenuToggle {
+				-webkit-transform: translateX(0) !important;
+				-moz-transform: translateX(0) !important;
+				-ms-transform: translateX(0) !important;
+				-o-transform: translateX(0) !important;
+				transform: translateX(0) !important;
+			}
+			
+			#close {
+				float: right;
+				margin: 7px 18px;
+			}
+			/**********move**************/
+			.move {
+				display: inline-block;
+				width: 50px;
+				height: 50px;
+				margin-left: 20px;
+				background: red;
+				transition-property: transform;
+				transition-duration: 1s;
+				transition-timing-function: linear;
+				transition-timing-function: cubic-bezier(0.5, 0.5, 0.5, 0.5);
+				transition-timing-function: cubic-bezier(.07,.68,.42,.97);
+			}
+			.movego {
+				-webkit-transform: translateX(500px);
+				transform: translateX(500px);
+			}
+		</style>
+	</head>
+
+	<body>
+		<header>
+			<a href="" id="menu_toggle" class="fa fa-bars menu fa-2x"></a>
+			<nav id="side-menu">
+				<a href="" id="close" class="fa fa-close"></a>
+				<ul>
+					<li class="nav-one">
+						<a href="">home</a>
+					</li>
+					<li class="nav-two">
+						<a href="">about</a>
+					</li>
+					<li class="nav-three">
+						<a href="">blog</a>
+					</li>
+					<li class="nav-four">
+						<a href="">project</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<section>
+			<div class="move">move</div>
+		</section>
+		<script type="text/javascript">
+			// Forked from :http://codepen.io/vincent-vade/pen/VvpQmE
+			function menu() {
+				var $toggle = document.getElementById('menu_toggle');
+				var $sideMenu = document.getElementById('side-menu');
+				var $close = document.getElementById('close');
+//				var $tl = new TimelineMax();
+				$toggle.addEventListener('click', function() {
+					classie.toggle($sideMenu, "sideMenuToggle");
+				});
+				$close.addEventListener('click', function() {
+					classie.remove($sideMenu, "sideMenuToggle");
+				});
+			}
+//			menu();
+			var move = document.querySelector(".move");
+			setTimeout(function(){
+				move.classList.toggle("movego");
+			},1000);
+			setTimeout(function(){
+				move.classList.toggle("movego");
+			},3000);
+//			var moveLeft = parseInt(move.style.marginLeft);
+//			if (moveLeft == 0) {
+//				move.classList.toggle("movego");
+//			} else {
+//				move.classList.toggle("movego");
+//			}
+		</script>
+	</body>
+
+</html>
