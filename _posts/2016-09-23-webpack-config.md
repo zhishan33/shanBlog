@@ -24,11 +24,22 @@ module.exports = {
 		contentBase:"../dist/webpack_react/build",
 		colors:true,
 		inline:true,
+		hot:true,
 		historyApiFallback:true	
 	},
+	plugins:[
+		new webpack.HotModuleReplacementPlugin() //热加载插件
+	],
 	module:{
 		loaders:[
-			{test:'/.js$/',loader:'babel'},
+			{
+				test:'/.js$/',
+				loader:'babel',
+				exclude: /node_modules/,
+				query:{
+					presets:['es2015','react']
+				}
+			},
 			{test:'/.scss$/',loader:'style!css!sass'},
 			{test:'/.(png|jpg|jpeg)/',loader:'url?limit=8192'}
 		]
@@ -46,6 +57,7 @@ module.exports = {
 5. **--content-base**  指向设置的输出目录,默认webpack-dev-server会为根文件夹提供本地服务器，如果想为另外一个目录下的文件提供本地服务器，应该在这里设置其所在目录
 6. **--config** 指定配置文件
 7. **--inline** 设置为true，当源文件改变时会自动刷新页面
+8. **--hot** 实现功能热加载。(plugins)
 
 ## loaders 
 
