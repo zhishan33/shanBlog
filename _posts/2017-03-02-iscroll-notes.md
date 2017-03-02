@@ -21,7 +21,7 @@ title: iscroll notes
                 taps: true
             });
         }
-		
+		document.addEventListener('touchmove', preEvent, false);
 		Loaded();
 		
 	</script>
