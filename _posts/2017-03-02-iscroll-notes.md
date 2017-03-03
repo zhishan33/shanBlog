@@ -11,7 +11,6 @@ title: iscroll notes
 ```
 	<script>
 		var preEvent = function(e){e.preventDefault();}
-		
 		var myScroll;
         function Loaded() {
             myScroll = new IScroll('#wrapper', {
