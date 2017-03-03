@@ -10,7 +10,11 @@ title: iscroll notes
 
 ```
 	<script>
+		/*
+		 * 默认事件函数函数表达式
+		 */
 		var preEvent = function(e){e.preventDefault();}
+		
 		var myScroll;
         function Loaded() {
             myScroll = new IScroll('#wrapper', {
