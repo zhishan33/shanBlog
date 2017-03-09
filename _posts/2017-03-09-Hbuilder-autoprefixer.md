@@ -6,7 +6,7 @@ title: Hbuilder autoprefixer
 
 ## Hbuilder autoprefixer 预编译
 
-![alt text](/shanBlog/image/Hbuilder_autoprefixer.png)
+![autoprefixer config](/shanBlog/images/Hbuilder_autoprefixer.png)
 
 ### 尝试了好多次 -c config.json 都无效。最后只好修改插件的index.js（C:\Users\Administrator\AppData\Roaming\npm\node_modules\autoprefixer\node_modules\browserslist\index.js）文件的默认配置参数
 
