@@ -65,7 +65,7 @@ title: java 基础 继承 接口
 
 
 ## 相关链接
-- [note](http://zhishan33.github.io/shanBlog/)
+- [首页](http://zhishan33.github.io/shanBlog/)
 
 <p>{{ page.date | date_to_string }}</p>
 
