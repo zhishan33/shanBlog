@@ -27,6 +27,7 @@ title: java 基础 继承 接口
 # abstract class, interface
 
 > 抽象类中既可以有抽象方法也可以有非抽象方法，而接口中只能用抽象方法，接口可以实现多继承，而类只能单继承
+
 ```
   abstract class demo {
     
@@ -48,7 +49,9 @@ title: java 基础 继承 接口
   }
    
   class child extends demo implements Demo1,Demo2 {
-  
+     void fun1(){}
+     void fun2(){}
+     void fun3(){}
   }
 
 ```
