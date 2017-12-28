@@ -31,11 +31,11 @@ title: java 基础 继承 接口
 ```
   abstract class demo {
     
-    void test {
+    void test (){
     
     }
     
-    abstract void test2{
+    abstract void test2(){
     
     }
   }
