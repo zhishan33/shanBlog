@@ -29,7 +29,9 @@ title: select元素的之右对齐
   select {
     direction: rtl;
   }
-
+  select option {
+    direction: ltr;
+  }
 ```
 
 > css的direction
