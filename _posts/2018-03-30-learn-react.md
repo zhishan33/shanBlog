@@ -42,29 +42,12 @@ title: learn react
 4.direction: initial;
 5.direction: unset;
 
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>
-    react
-  </title>
-<link href="styles/main.8d05bbfe.css" rel="stylesheet"></head>
-
-<body>
-  <div id="app"></div>
-  <div id="mount"></div>
-<script type="text/javascript" src="/shanBlog/scripts/bundle.js"></script></body>
-
-</html>
 
 
 
 ## 相关链接
 - [首页](http://zhishan33.github.io/shanBlog/)
+- [异步实验](http://zhishan33.github.io/shanBlog/scripts/js_asyn.html)
 
 <p>{{ page.date | date_to_string }}</p>
 
