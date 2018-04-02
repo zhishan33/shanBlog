@@ -2,15 +2,17 @@
 layout: default
 title: learn react
 ---
-
 # react + react-router-dom + mobx (小实验)
 
 > 小实验
 
-
 ```
 
-  
+  class Ele extends React.Component {
+    contruct(props){
+      this.state = {}
+    }
+  } 
 
 ```
 
@@ -18,14 +20,13 @@ title: learn react
 
 ```
 
+  class Ele extends React.Component {
+    contruct(props){
+      this.state = {}
+    }
+  } 
 
 ```
-
-> 小实验
-
-
-
-
 
 ## 相关链接
 - [首页](http://zhishan33.github.io/shanBlog/)
