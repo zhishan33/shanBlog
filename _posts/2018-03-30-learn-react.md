@@ -33,4 +33,3 @@ title: learn react
 - [react实验](http://zhishan33.github.io/shanBlog/scripts/index.html)
 
 <p>{{ page.date | date_to_string }}</p>
-
