@@ -47,3 +47,4 @@ title: select元素的之右对齐
 
 <p>{{ page.date | date_to_string }}</p>
 
+> {{page.date | date_to_string }}
