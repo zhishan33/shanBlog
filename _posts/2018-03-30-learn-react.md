@@ -5,23 +5,23 @@ title: learn react
 
 # react + react-router-dom + mobx (小实验)
 
-> 
+> 小实验
 
 
 ```
 
+  
+
+```
+
+# 小实验
+
+```
 
 
 ```
 
-#
-
-```
-
-
-```
-
-> 
+> 小实验
 
 
 
