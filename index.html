@@ -20,20 +20,42 @@ title: shan blog
 	<!--<h1 class="page-heading">Posts</h1>-->
 	<!--<h1 class="page-heading">最新文章</h1>-->
 	<h2>
-		<a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span
-				aria-hidden="true" class="octicon octicon-link"></span></a>最新文章</h2>
-
-	<ol class="post-list">
-		{% for post in site.posts %}
-		<li>
-			<span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-			<h3>
-				<a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title | escape }}</a>
-			</h3>
-		</li>
-		{% endfor %}
-	</ol>
-
+			<a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span
+					aria-hidden="true" class="octicon octicon-link"></span></a>最新文章</h2>
+	
+		<ol class="post-list">
+			{% for post in site.posts offset:0 limit:5 %}
+			<li>
+				<span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+				<h3>
+					<a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title | escape }}</a>
+				</h3>
+				<p>
+					<!-- 获取文章摘要，取前50个字符 -->
+					{{ post.content | strip_html | strip_newlines | truncate: 50 }}
+				</p> 
+			</li>
+			{% endfor %}
+		</ol>
+		<h2>
+				<a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span
+						aria-hidden="true" class="octicon octicon-link"></span></a>所有文章</h2>
+		
+			<ol class="post-list">
+				{% for post in site.posts offset:5 %}
+				<li>
+					<span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+					<h3>
+						<a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title | escape }}</a>
+					</h3>
+					<p>
+						<!-- 获取文章摘要，取前50个字符 -->
+						{{ post.content | strip_html | strip_newlines | truncate: 50 }}
+					</p> 
+				</li>
+				{% endfor %}
+			</ol>
+			
 	<!--<p class="rss-subscribe">subscribe
 		<a href="{{ " /feed.xml " | prepend: site.baseurl }}">via RSS</a>
 	</p>-->
