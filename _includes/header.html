@@ -17,3 +17,21 @@
 	<a href="https://github.com/zhishan33/shanBlog/zipball/master" class="btn">Download .zip</a>
 	<a href="https://github.com/zhishan33/shanBlog/tarball/master" class="btn">Download .tar.gz</a>
 </section>
+blog_1:    recent
+<section>
+	{% for link in site.link1 %}
+		{% assign count = 0 %}
+		{% if link.type == site.blog_1 %}
+			{% for post in site.posts %}
+				{% assign count = count | plus: 1 %}
+			{% endfor %}
+		{% endif %}
+
+		{% if link.type == site.blog_2 %}
+			{% for post in site.posts %}
+			  {% if post.other %}
+					{% assign count = count | plus: 1 %}
+				{% endif %}
+			{% endfor %}
+		{% endif %}
+</section>

@@ -49,3 +49,34 @@ theme: minima
 kramdown:
   input: GFM
 
+links1:
+  - name:     所有
+    url:      /
+    type:     recent
+    external: false
+  - name:     杂集
+    url:      /blog/other
+    type:     other
+    external: false
+  - name:     正则
+    url:      /blo/reg
+    type:     reg
+    external: false
+  - name:     git
+    url:      /blog/git
+    type:     git
+    external: false
+  - name:     css
+    url:      /blog/css
+    type:     css
+    external: false
+  - name:     javascript
+    url:      /blog/javascript
+    type:     javascript
+    external: false
+blog_1:    recent
+blog_2:    other
+blog_3:    reg
+blog_4:    git
+blog_5:    css
+blog_6:    javascript
