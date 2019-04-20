@@ -1,12 +1,12 @@
---- 
-layout: default 
-title: shan blog 
+---
+layout: default
+title: shan blog
 ---
 <!--<head>-->
-	<!--<meta charset="utf-8" />-->
-	<!--<title>首页</title>-->
-	<!--<link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">-->
-	<!--<link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">-->
+<!--<meta charset="utf-8" />-->
+<!--<title>首页</title>-->
+<!--<link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">-->
+<!--<link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">-->
 <!--</head>-->
 <!--<section class="page-header">
 	<h1 class="project-name">Shanblog</h1>
@@ -20,15 +20,16 @@ title: shan blog
 	<!--<h1 class="page-heading">Posts</h1>-->
 	<!--<h1 class="page-heading">最新文章</h1>-->
 	<h2>
-<a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>最新文章</h2>
+		<a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span
+				aria-hidden="true" class="octicon octicon-link"></span></a>最新文章</h2>
 
 	<ol class="post-list">
 		{% for post in site.posts %}
 		<li>
 			<span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
 			<h3>
-	          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title | escape }}</a>
-	        </h3>
+				<a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title | escape }}</a>
+			</h3>
 		</li>
 		{% endfor %}
 	</ol>
@@ -38,11 +39,13 @@ title: shan blog
 	</p>-->
 	<article>
 		<h3>
-<a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>其他文档</h3>
+			<a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span
+					aria-hidden="true" class="octicon octicon-link"></span></a>其他文档</h3>
 		<ol>
 			<li>
-				<a href="http://zhishan33.github.io/shanBlog/2016-09-01-re-nore.md">正则表达式匹配连续数字和重复数字</a>
+				<a href="https://zhishan33.github.io/shanBlog/2016-09-01-re-nore.md">正则表达式匹配连续数字和重复数字</a>
 			</li>
 		</ol>
 	</article>
 </div>
+<p>{{ page.date }} - Written by {{ page.author }}</p>
