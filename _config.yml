@@ -80,3 +80,19 @@ blog_3:    reg
 blog_4:    git
 blog_5:    css
 blog_6:    javascript
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "default"
+      author: "zhishan"
+  -
+    scope:
+      path: "projects"
+      type: "pages"
+    values:
+      layout: "project"
+      author: "JS"
