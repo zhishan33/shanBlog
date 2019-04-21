@@ -45,7 +45,7 @@ paginate_path: /page:num
 #markdown: rdiscount
 # Markdown
 ## https://github.com/chjj/marked
-theme: minima
+theme: jekyll-theme-hacker
 kramdown:
   input: GFM
 
