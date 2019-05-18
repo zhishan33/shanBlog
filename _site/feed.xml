@@ -3,632 +3,615 @@
   <channel>
     <title>学习笔记</title>
     <description>学习总结 思考感悟 知识管理</description>
-    <link>http://example.com/shanBlog/</link>
-    <atom:link href="http://example.com/shanBlog/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 06 Sep 2016 17:06:39 +0800</pubDate>
-    <lastBuildDate>Tue, 06 Sep 2016 17:06:39 +0800</lastBuildDate>
-    <generator>Jekyll v3.2.1</generator>
+    <link>http://localhost:4000/shanBlog/</link>
+    <atom:link href="http://localhost:4000/shanBlog/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Sat, 18 May 2019 22:32:16 +0800</pubDate>
+    <lastBuildDate>Sat, 18 May 2019 22:32:16 +0800</lastBuildDate>
+    <generator>Jekyll v3.8.5</generator>
     
       <item>
-        <title>learn Welcome to Jekyll!</title>
-        <description>&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+        <title>ubuntu下安装vue-cli</title>
+        <description>&lt;h1 id=&quot;ubuntu-下如何安装-vue-cli&quot;&gt;Ubuntu 下如何安装 vue-cli&lt;/h1&gt;
 
-&lt;p&gt;To add new posts, simply add a file in the &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code class=&quot;highlighter-rouge&quot;&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
+&lt;h2 id=&quot;1-安装nodejs&quot;&gt;1. 安装nodejs&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;从nodejs官网(https://nodejs.org/en/download/)下载Linux Binaries (x64)源代码&lt;/li&gt;
+  &lt;li&gt;解压node源代码包&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+  tar -xvf node-v10.15.3-linux-x64.tar.xz -C /media/home/application/
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Tom'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints 'Hi, Tom' to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&quot;2-建立软连接&quot;&gt;2. 建立软连接&lt;/h2&gt;
 
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+   sudo ln -s /media/home/application/node-v10.15.3-linux-x64/bin/node /usr/local/bin/node
+   sudo ln -s /media/home/application/node-v10.15.3-linux-x64/bin/npm /usr/local/bin/npm
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;3-修改npm安装包默认目录&quot;&gt;3. 修改npm安装包默认目录&lt;/h2&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+  npm config set prefix=&quot;/media/home/application/npm-global&quot;
+  npm config set cache=&quot;/media/home/application/npm-cache&quot;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;4-安装nrm&quot;&gt;4. 安装nrm&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;创建nrm软连接&lt;/li&gt;
+  &lt;li&gt;利用nrm查看npm安装源&lt;/li&gt;
+  &lt;li&gt;切换 npm 安装源&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  npm i install -g nrm
+  sudo ln -s /media/home/application/npm-global/bin/nrm /usr/local/bin/nrm
+  nrm ls
+  nrm use taobao
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;5-开始安装vue-cli&quot;&gt;5. 开始安装vue-cli&lt;/h2&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  npm install -g @vue/cli
+  sudo ln -s /media/home/application/npm-global/bin/vue /usr/local/bin/vue
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;相关链接&quot;&gt;相关链接&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://zhishan33.github.io/shanBlog/&quot;&gt;首页&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://blog.csdn.net/FormulaRoom/article/details/73920741&quot;&gt;Linux下Vue开发环境搭建一篇全搞定&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;2019, May 16&lt;/p&gt;
+&lt;/blockquote&gt;
 </description>
-        <pubDate>Mon, 05 Sep 2016 13:19:07 +0800</pubDate>
-        <link>http://example.com/shanBlog/jekyll/update/2016/09/05/welcome-to-jekyll.html</link>
-        <guid isPermaLink="true">http://example.com/shanBlog/jekyll/update/2016/09/05/welcome-to-jekyll.html</guid>
+        <pubDate>Thu, 16 May 2019 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/shanBlog/vue/2019/05/16/vue-ubuntu.html</link>
+        <guid isPermaLink="true">http://localhost:4000/shanBlog/vue/2019/05/16/vue-ubuntu.html</guid>
+        
+        <category>Vue</category>
+        
+        <category>Ubuntu</category>
         
         
-        <category>jekyll</category>
-        
-        <category>update</category>
+        <category>vue</category>
         
       </item>
     
       <item>
-        <title>你好，世界</title>
-        <description>&lt;p&gt;　　&amp;lt;h2&amp;gt;你好，世界&amp;lt;/h2&amp;gt;&lt;/p&gt;
+        <title>Git Flow</title>
+        <description>&lt;h1 id=&quot;git-flow&quot;&gt;Git Flow&lt;/h1&gt;
 
-&lt;p&gt;　　&amp;lt;p&amp;gt;我的第一篇文章&amp;lt;/p&amp;gt;&lt;/p&gt;
+&lt;h2 id=&quot;1-创建dev分支&quot;&gt;1. 创建dev分支&lt;/h2&gt;
 
-&lt;p&gt;　　&amp;lt;p&amp;gt;05 Sep 2016&amp;lt;/p&amp;gt;&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+git branch dev
+git push -u origin dev
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;2-开始新的feature开发&quot;&gt;2. 开始新的Feature开发&lt;/h2&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+git checkout -b some-feature dev
+git push -u origin some-feature
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;21-做一些feature改动&quot;&gt;2.1. 做一些Feature改动&lt;/h2&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+touch content &amp;gt; file1.txt
+git add file1.txt
+git commit -m &quot;some-feature&quot;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;3-完成feature&quot;&gt;3. 完成Feature&lt;/h2&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+git push origin dev
+git checkout dev
+git merge --no-ff some-feature
+git push origin dev
+
+git branch -d some-feature
+
+git push origin --delete some-feature
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;4-开始release&quot;&gt;4. 开始Release&lt;/h2&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+git checkout -b release-0.1.0 dev
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;5-完成release&quot;&gt;5. 完成Release&lt;/h2&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+git checkout master
+git merge --no-ff release-0.1.0
+git push
+
+git checkout dev
+git merge --no-ff release-0.1.0
+git push
+
+git branch -d release-0.1.0
+
+[git branch origin --delete release-0.1.0]
+
+git tag -a v0.1.0 master
+git push --tags
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;6-开始hotfix&quot;&gt;6. 开始Hotfix&lt;/h2&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+git checkout -b hotfix-0.1.1 master
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;7-完成hotfix&quot;&gt;7. 完成Hotfix&lt;/h2&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+git checkout master
+git merge --no-ff hotfix-0.1.1
+git push
+
+git checkout dev
+git merge --no-ff hotfix-0.1.1
+git push
+
+git branch -d hotfix-0.1.1
+
+git tag -a 0.1.1 master
+git push --tags
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;相关链接&quot;&gt;相关链接&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://zhishan33.github.io/shanBlog/&quot;&gt;首页&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.cnblogs.com/cnblogsfans/p/5075073.html&quot;&gt;Git 在团队中的最佳实践–如何正确使用Git Flow&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;2019, Apr 20&lt;/p&gt;
+&lt;/blockquote&gt;
 </description>
-        <pubDate>Mon, 05 Sep 2016 00:00:00 +0800</pubDate>
-        <link>http://example.com/shanBlog/2016/09/05/test.html</link>
-        <guid isPermaLink="true">http://example.com/shanBlog/2016/09/05/test.html</guid>
+        <pubDate>Sat, 20 Apr 2019 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/shanBlog/git/2019/04/20/git-flow.html</link>
+        <guid isPermaLink="true">http://localhost:4000/shanBlog/git/2019/04/20/git-flow.html</guid>
         
+        <category>Git</category>
+        
+        <category>learn</category>
+        
+        
+        <category>git</category>
         
       </item>
     
       <item>
-        <title>正则表达式</title>
-        <description>&lt;h2 id=&quot;section&quot;&gt;正则表达式&lt;/h2&gt;
+        <title>css多行文本</title>
+        <description>&lt;h1 id=&quot;css多行文本&quot;&gt;css多行文本&lt;/h1&gt;
 
+&lt;h2 id=&quot;html&quot;&gt;html&lt;/h2&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+  &amp;lt;div class=&quot;text-wrapper&quot;&amp;gt;
+    &amp;lt;div class=&quot;more-line-text&quot;&amp;gt;
+      more-line-text more-line-text
+      more-line-text more-line-text
+      more-line-text more-line-text
+      more-line-text more-line-text
+      more-line-text more-line-text
+      more-line-text more-line-text more-line-text
+      more-line-text more-line-text
+      more-line-text more-line-text
+      more-line-text more-line-text
+    &amp;lt;/div&amp;gt;
+  &amp;lt;/div&amp;gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h2 id=&quot;css&quot;&gt;CSS&lt;/h2&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  .text-wrapper {
+    height: 40px;
+    line-height: 20px;
+    overflow: hidden;
+  }
+
+  .text-wrapper .more-line-text {
+    float: right;
+    margin-left: -5px;
+    width: 100%;
+    word-break: break-all;
+  }
+
+  .text-wrapper::before {
+    float: left;
+    width: 5px;
+    content: '';
+    height: 40px;
+  }
+
+  .text-wrapper::after {
+    float: right;
+    content: &quot;...&quot;;
+    height: 20px;
+    line-height: 20px;
+    /* 为三个省略号的宽度 */
+    width: 3em;
+    /* 使盒子不占位置 */
+    margin-left: -3em;
+    /* 移动省略号位置 */
+    position: relative;
+    left: 100%;
+    top: -20px;
+    padding-right: 5px;
+    text-align: center;
+    background: linear-gradient(to right,transparent 0%, transparent 30%,#FFF 30%, #FFF);
+  }
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;相关链接&quot;&gt;相关链接&lt;/h2&gt;
 &lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;匹配重复数字&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;匹配连续数字&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;section-1&quot;&gt;匹配重复数字&lt;/h3&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;script type=&quot;text/javascript&quot;&amp;gt;
-var reText = &quot;22222&quot;,
-	reText1 = &quot;aaaa&quot;;
-	/^(\w)\1{4,13}$/.test(reText) //true
-	/^(\w)\1{4,13}$/.test(reText1) //true
-			
-&amp;lt;/script&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;h3 id=&quot;section-2&quot;&gt;匹配字符串中的重复字母或数字&lt;/h3&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;script type=&quot;text/javascript&quot;&amp;gt;
-var reText = &quot;22222&quot;,
-	reText1 = &quot;aaaa&quot;;
-	/^(\w)*(\d)\2{2}(\w)*$/.test(reText) //true 匹配重复大于3位及以上
-	/^(\w)*(a-Z)\2{2}(\w)*$/.test(reText1) //true
-			
-&amp;lt;/script&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;h3 id=&quot;section-3&quot;&gt;匹配连续数字&lt;/h3&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;script type=&quot;text/javascript&quot;&amp;gt;
-var reText = &quot;12345&quot;,
-	reText1 = &quot;876543&quot;;
-	/^(?:0(?=1)|1(?=2)|2(?=3)|3(?=4)|4(?=5)|5(?=6)|6(?=7)|7(?=8)|8(?=9)|9(?=0))+\d$/.test(reText) //true
-	/^(?:9(?=8)|8(?=7)|7(?=6)|6(?=5)|5(?=4)|4(?=3)|3(?=2)|2(?=1)|1(?=0)|0(?=0))+\d$/.test(reText1) //true
-			
-&amp;lt;/script&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;01 Sep 2016&lt;/p&gt;
-</description>
-        <pubDate>Thu, 01 Sep 2016 00:00:00 +0800</pubDate>
-        <link>http://example.com/shanBlog/2016/09/01/re-note.html</link>
-        <guid isPermaLink="true">http://example.com/shanBlog/2016/09/01/re-note.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>markdown学习笔记（二）</title>
-        <description>&lt;h1 id=&quot;section&quot;&gt;欢迎使用马克飞象&lt;/h1&gt;
-
-&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;@(示例笔记本)[马克飞象&lt;/td&gt;
-      &lt;td&gt;帮助&lt;/td&gt;
-      &lt;td&gt;Markdown]&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;&lt;strong&gt;马克飞象&lt;/strong&gt;是一款专为印象笔记（Evernote）打造的Markdown编辑器，通过精心的设计与技术实现，配合印象笔记强大的存储和同步功能，带来前所未有的书写体验。特点概述：&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;功能丰富&lt;/strong&gt; ：支持高亮代码块、&lt;em&gt;LaTeX&lt;/em&gt; 公式、流程图，本地图片以及附件上传，甚至截图粘贴，工作学习好帮手；&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;得心应手&lt;/strong&gt; ：简洁高效的编辑器，提供&lt;a href=&quot;http://maxiang.info/client_zh&quot;&gt;桌面客户端&lt;/a&gt;以及&lt;a href=&quot;https://chrome.google.com/webstore/detail/kidnkfckhbdkfgbicccmdggmpgogehop&quot;&gt;离线Chrome App&lt;/a&gt;，支持移动端 Web；&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;深度整合&lt;/strong&gt; ：支持选择笔记本和添加标签，支持从印象笔记跳转编辑，轻松管理。&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;[TOC]&lt;/p&gt;
-
-&lt;h2 id=&quot;markdown&quot;&gt;Markdown简介&lt;/h2&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Markdown 是一种轻量级标记语言，它允许人们使用易读易写的纯文本格式编写文档，然后转换成格式丰富的HTML页面。    —— &lt;a href=&quot;https://zh.wikipedia.org/wiki/Markdown&quot;&gt;维基百科&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;正如您在阅读的这份文档，它使用简单的符号标识不同的标题，将某些文字标记为&lt;strong&gt;粗体&lt;/strong&gt;或者&lt;em&gt;斜体&lt;/em&gt;，创建一个&lt;a href=&quot;http://www.example.com&quot;&gt;链接&lt;/a&gt;或一个脚注&lt;sup id=&quot;fnref:demo&quot;&gt;&lt;a href=&quot;#fn:demo&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;。下面列举了几个高级功能，更多语法请按&lt;code class=&quot;highlighter-rouge&quot;&gt;Ctrl + /&lt;/code&gt;查看帮助。&lt;/p&gt;
-
-&lt;h3 id=&quot;section-1&quot;&gt;代码块&lt;/h3&gt;
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nd&quot;&gt;@requires_authorization&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;somefunc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;param1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;''&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;param2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-    &lt;span class=&quot;s&quot;&gt;'''A docstring'''&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;param1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;param2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;# interesting&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'Greater'&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;param2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;param1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;or&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;None&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;SomeClass&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;pass&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;message&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'''interpreter
-... prompt'''&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;h3 id=&quot;latex-&quot;&gt;LaTeX 公式&lt;/h3&gt;
-
-&lt;p&gt;可以创建行内公式，例如 $\Gamma(n) = (n-1)!\quad\forall n\in\mathbb N$。或者块级公式：&lt;/p&gt;
-
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;x = \dfrac{-b \pm \sqrt{b^2 - 4ac}}{2a}&lt;/script&gt;
-
-&lt;h3 id=&quot;section-2&quot;&gt;表格&lt;/h3&gt;
-&lt;p&gt;| Item      |    Value | Qty  |
-| :——– | ——–:| :–: |
-| Computer  | 1600 USD |  5   |
-| Phone     |   12 USD |  12  |
-| Pipe      |    1 USD | 234  |&lt;/p&gt;
-
-&lt;h3 id=&quot;section-3&quot;&gt;流程图&lt;/h3&gt;
-&lt;pre&gt;&lt;code class=&quot;language-flow&quot;&gt;st=&amp;gt;start: Start
-e=&amp;gt;end
-op=&amp;gt;operation: My Operation
-cond=&amp;gt;condition: Yes or No?
-
-st-&amp;gt;op-&amp;gt;cond
-cond(yes)-&amp;gt;e
-cond(no)-&amp;gt;op
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;以及时序图:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-sequence&quot;&gt;Alice-&amp;gt;Bob: Hello Bob, how are you?
-Note right of Bob: Bob thinks
-Bob--&amp;gt;Alice: I am good thanks!
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;strong&gt;提示：&lt;/strong&gt;想了解更多，请查看&lt;strong&gt;流程图&lt;/strong&gt;&lt;a href=&quot;http://adrai.github.io/flowchart.js/&quot;&gt;语法&lt;/a&gt;以及&lt;strong&gt;时序图&lt;/strong&gt;&lt;a href=&quot;http://bramp.github.io/js-sequence-diagrams/&quot;&gt;语法&lt;/a&gt;。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h3 id=&quot;section-4&quot;&gt;复选框&lt;/h3&gt;
-
-&lt;p&gt;使用 &lt;code class=&quot;highlighter-rouge&quot;&gt;- [ ]&lt;/code&gt; 和 &lt;code class=&quot;highlighter-rouge&quot;&gt;- [x]&lt;/code&gt; 语法可以创建复选框，实现 todo-list 等功能。例如：&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;[x] 已完成事项&lt;/li&gt;
-  &lt;li&gt;[ ] 待办事项1&lt;/li&gt;
-  &lt;li&gt;[ ] 待办事项2&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;strong&gt;注意：&lt;/strong&gt;目前支持尚不完全，在印象笔记中勾选复选框是无效、不能同步的，所以必须在&lt;strong&gt;马克飞象&lt;/strong&gt;中修改 Markdown 原文才可生效。下个版本将会全面支持。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&quot;section-5&quot;&gt;印象笔记相关&lt;/h2&gt;
-
-&lt;h3 id=&quot;section-6&quot;&gt;笔记本和标签&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;马克飞象&lt;/strong&gt;增加了&lt;code class=&quot;highlighter-rouge&quot;&gt;@(笔记本)[标签A|标签B]&lt;/code&gt;语法, 以选择笔记本和添加标签。 &lt;strong&gt;绑定账号后&lt;/strong&gt;， 输入&lt;code class=&quot;highlighter-rouge&quot;&gt;(&lt;/code&gt;自动会出现笔记本列表，请从中选择。&lt;/p&gt;
-
-&lt;h3 id=&quot;section-7&quot;&gt;笔记标题&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;马克飞象&lt;/strong&gt;会自动使用文档内出现的第一个标题作为笔记标题。例如本文，就是第一行的 &lt;code class=&quot;highlighter-rouge&quot;&gt;欢迎使用马克飞象&lt;/code&gt;。&lt;/p&gt;
-
-&lt;h3 id=&quot;section-8&quot;&gt;快捷编辑&lt;/h3&gt;
-&lt;p&gt;保存在印象笔记中的笔记，右上角会有一个红色的编辑按钮，点击后会回到&lt;strong&gt;马克飞象&lt;/strong&gt;中打开并编辑该笔记。&lt;/p&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;strong&gt;注意：&lt;/strong&gt;目前用户在印象笔记中单方面做的任何修改，马克飞象是无法自动感知和更新的。所以请务必回到马克飞象编辑。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h3 id=&quot;section-9&quot;&gt;数据同步&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;马克飞象&lt;/strong&gt;通过&lt;strong&gt;将Markdown原文以隐藏内容保存在笔记中&lt;/strong&gt;的精妙设计，实现了对Markdown的存储和再次编辑。既解决了其他产品只是单向导出HTML的单薄，又规避了服务端存储Markdown带来的隐私安全问题。这样，服务端仅作为对印象笔记 API调用和数据转换之用。&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;strong&gt;隐私声明：用户所有的笔记数据，均保存在印象笔记中。马克飞象不存储用户的任何笔记数据。&lt;/strong&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h3 id=&quot;section-10&quot;&gt;离线存储&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;马克飞象&lt;/strong&gt;使用浏览器离线存储将内容实时保存在本地，不必担心网络断掉或浏览器崩溃。为了节省空间和避免冲突，已同步至印象笔记并且不再修改的笔记将删除部分本地缓存，不过依然可以随时通过&lt;code class=&quot;highlighter-rouge&quot;&gt;文档管理&lt;/code&gt;打开。&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;strong&gt;注意：&lt;/strong&gt;虽然浏览器存储大部分时候都比较可靠，但印象笔记作为专业云存储，更值得信赖。以防万一，&lt;strong&gt;请务必经常及时同步到印象笔记&lt;/strong&gt;。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&quot;section-11&quot;&gt;编辑器相关&lt;/h2&gt;
-&lt;h3 id=&quot;section-12&quot;&gt;设置&lt;/h3&gt;
-&lt;p&gt;右侧系统菜单（快捷键&lt;code class=&quot;highlighter-rouge&quot;&gt;Ctrl + M&lt;/code&gt;）的&lt;code class=&quot;highlighter-rouge&quot;&gt;设置&lt;/code&gt;中，提供了界面字体、字号、自定义CSS、vim/emacs 键盘模式等高级选项。&lt;/p&gt;
-
-&lt;h3 id=&quot;section-13&quot;&gt;快捷键&lt;/h3&gt;
-
-&lt;p&gt;帮助    &lt;code class=&quot;highlighter-rouge&quot;&gt;Ctrl + /&lt;/code&gt;
-同步文档    &lt;code class=&quot;highlighter-rouge&quot;&gt;Ctrl + S&lt;/code&gt;
-创建文档    &lt;code class=&quot;highlighter-rouge&quot;&gt;Ctrl + Alt + N&lt;/code&gt;
-最大化编辑器    &lt;code class=&quot;highlighter-rouge&quot;&gt;Ctrl + Enter&lt;/code&gt;
-预览文档 &lt;code class=&quot;highlighter-rouge&quot;&gt;Ctrl + Alt + Enter&lt;/code&gt;
-文档管理    &lt;code class=&quot;highlighter-rouge&quot;&gt;Ctrl + O&lt;/code&gt;
-系统菜单    &lt;code class=&quot;highlighter-rouge&quot;&gt;Ctrl + M&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;加粗    &lt;code class=&quot;highlighter-rouge&quot;&gt;Ctrl + B&lt;/code&gt;
-插入图片    &lt;code class=&quot;highlighter-rouge&quot;&gt;Ctrl + G&lt;/code&gt;
-插入链接    &lt;code class=&quot;highlighter-rouge&quot;&gt;Ctrl + L&lt;/code&gt;
-提升标题    &lt;code class=&quot;highlighter-rouge&quot;&gt;Ctrl + H&lt;/code&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;section-14&quot;&gt;关于收费&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;马克飞象&lt;/strong&gt;为新用户提供 10 天的试用期，试用期过后需要&lt;a href=&quot;maxiang.info/vip.html&quot;&gt;续费&lt;/a&gt;才能继续使用。未购买或者未及时续费，将不能同步新的笔记。之前保存过的笔记依然可以编辑。&lt;/p&gt;
-
-&lt;h2 id=&quot;section-15&quot;&gt;反馈与建议&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;微博：&lt;a href=&quot;http://weibo.com/u/2788354117&quot;&gt;@马克飞象&lt;/a&gt;，&lt;a href=&quot;http://weibo.com/ggock&quot; title=&quot;开发者个人账号&quot;&gt;@GGock&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;邮箱：&lt;a href=&quot;mailto:hustgock@gmail.com&quot;&gt;hustgock@gmail.com&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-&lt;p&gt;感谢阅读这份帮助文档。请点击右上角，绑定印象笔记账号，开启全新的记录与分享体验吧。&lt;/p&gt;
-
-&lt;p&gt;e MarkDown&lt;/p&gt;
-&lt;div class=&quot;footnotes&quot;&gt;
-  &lt;ol&gt;
-    &lt;li id=&quot;fn:demo&quot;&gt;
-      &lt;p&gt;这是一个示例脚注。请查阅 &lt;a href=&quot;https://github.com/fletcher/MultiMarkdown/wiki/MultiMarkdown-Syntax-Guide#footnotes&quot;&gt;MultiMarkdown 文档&lt;/a&gt; 关于脚注的说明。 &lt;strong&gt;限制：&lt;/strong&gt; 印象笔记的笔记内容使用 &lt;a href=&quot;https://dev.yinxiang.com/doc/articles/enml.php&quot;&gt;ENML&lt;/a&gt; 格式，基于 HTML，但是不支持某些标签和属性，例如id，这就导致&lt;code class=&quot;highlighter-rouge&quot;&gt;脚注&lt;/code&gt;和&lt;code class=&quot;highlighter-rouge&quot;&gt;TOC&lt;/code&gt;无法正常点击。 &lt;a href=&quot;#fnref:demo&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-  &lt;/ol&gt;
-&lt;/div&gt;
-</description>
-        <pubDate>Fri, 22 Jul 2016 00:00:00 +0800</pubDate>
-        <link>http://example.com/shanBlog/2016/07/22/lesson-markdown.html</link>
-        <guid isPermaLink="true">http://example.com/shanBlog/2016/07/22/lesson-markdown.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>js中ajax的异步执行与同步执行</title>
-        <description>&lt;p&gt;#js中ajax的异步执行与同步执行&lt;/p&gt;
-
-&lt;p&gt;@(笔记)[ajax]&lt;/p&gt;
-
-&lt;p&gt;##工作中的问题&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;在循环之前给元素标记一种状态，然后执行循环体每一次循环都有一次&lt;strong&gt;ajax&lt;/strong&gt;请求，循环结束之后恢复元素状态。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;###代码块&lt;/p&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;html&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;ul&amp;gt;
-	&amp;lt;li&amp;gt;&amp;lt;button id=&quot;getinfo&quot;&amp;gt;获取信息&amp;lt;/button&amp;gt;&amp;lt;/li&amp;gt;
-	&amp;lt;li&amp;gt;&amp;lt;button id=&quot;getnext&quot;&amp;gt;获取下一个&amp;lt;/button&amp;gt;&amp;lt;/li&amp;gt;
-	&amp;lt;li id=&quot;info&quot;&amp;gt;
-		&amp;lt;p&amp;gt;信息替换&amp;lt;/p&amp;gt;
-		&amp;lt;p&amp;gt;信息替换&amp;lt;/p&amp;gt;
-		&amp;lt;p&amp;gt;信息替换&amp;lt;/p&amp;gt;
-	&amp;lt;/li&amp;gt;
-&amp;lt;/ul&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;strong&gt;循环开始之前运行的方法&lt;/strong&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;function ajaxStart() {
-	console.log(&quot;ajaxStart&quot;);
-	$(&quot;#getnext&quot;).html(&quot;获取中。。。&quot;);
-} &amp;gt;**循环体** ajax同步
-
-function ajaxMain() {
-	$('p').each(function() {
-		//setTimeout(function() {
-			$.ajax({
-				type: &quot;get&quot;,
-				url: &quot;../json/js_asyn.json&quot;,
-				async: false,
-				success: function(data) {
-					console.log('ajaxMain');
-				}
-			});
-		//}, 2000);
-	});
-} &amp;gt;**循环结束** 
-
-function ajaxEnd() {
-	console.log('ajaxEnd');
-	$(&quot;#getnext&quot;).html(&quot;获取成功&quot;);
-} &amp;gt;**执行代码**
-
-$(&quot;#getnext&quot;).click(function() {
-	ajaxStart();
-	ajaxMain();
-	ajaxEnd();
-}); &amp;gt;输出结果   UI渲染过程的效果不明显 ，**实际上UI渲染被阻塞$('getnext').html('获取中。。。')不能及时更新，而是等待ajaxMain函数打印完结果后再执行。必须让ajaxMain延时执行，UI才能及时更新，$('getnext').html('获取中。。。')可立即执行，同时ajaxEnd也会跟着执行。最后执行ajaxMain。**
-
-&quot;ajaxStart&quot;	
-&quot;ajaxMain&quot;	
-&quot;ajaxMain&quot;	
-&quot;ajaxMain&quot;
-&quot;ajaxEnd&quot;	 &amp;gt;如果ajax异步   输出结果   UI渲染过程的效果不明显
-
-&quot;ajaxStart&quot;	
-&quot;ajaxEnd&quot;	
-&quot;ajaxMain&quot;	
-&quot;ajaxMain&quot;	
-&quot;ajaxMain&quot;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;如果ajax延时2s执行  输出结果&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&quot;ajaxStart&quot;	
-&quot;ajaxEnd&quot;	
-&quot;ajaxMain&quot;	
-&quot;ajaxMain&quot;	
-&quot;ajaxMain&quot;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;如何才能在ajaxMain全部执行完之后再执行ajaxEnd？直接把ajaxEnd放到ajax成功时的代码内，肯定不行，第一次成功就会执行ajaxEnd，必须在每一次成功时记录一次状态，并在下一次成功时获取这个状态，直到传递到最后一个ajax成功时再执行ajaxEnd。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;hr /&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;strong&gt;最后ajaxMian&lt;/strong&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;function ajaxMain() {
-	var num = 0;
-	var plen = $(&quot;p&quot;).length;
-	$('p').each(function() {
-		var self = $(this);
-		setTimeout(function() {
-			$.ajax({
-				type: &quot;get&quot;,
-				url: &quot;../json/js_asyn.json&quot;,
-				async: false,
-				success: function(data) {
-					console.log('ajaxMain');
-					self.html('替换成功');
-					num = ++num;
-					if (num = plen) {
-						ajaxEnd();
-					}
-				}
-			});
-		}, 200);
-	});
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;##参考了以下代码，复习了ajax同步异步编程知识&lt;/p&gt;
-
-&lt;p&gt;###代码块&lt;/p&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;html&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;div id=&quot;output&quot;&amp;gt;&amp;lt;/div&amp;gt;
-&amp;lt;button onclick=&quot;updateSync ()&quot;&amp;gt;Run Sync&amp;lt;/button&amp;gt;
-&amp;lt;button onclick=&quot;updateAsync ()&quot;&amp;gt;Run Async&amp;lt;/button&amp;gt; &amp;gt;js
-
-function updateSync() {
-
-    for (var i = 0; i &amp;lt; 1000; i++) {
-        document.getElementById('output').innerHTML = i;
-    }
-    
-}
-function updateAsync() {
-
-    var i = 0;
-    function updateLater() {
-        document.getElementById('output').innerHTML = (i++);
-        if (i &amp;lt; 1000) {
-            setTimeout(updateLater, 0);
-        }
-    }
-    updateLater();
-    
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;由于js是单线程的所以运行updateSync函数导致UI更新被阻塞，setTimeout让updateLater函数异步执行，可以看到看到UI界面上从0到999快速地更新过程。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;###代码块
-	function synchronizedCode() {&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    var last = new Date().getTime();
-    var count = 0;
-    while (true) {
-        var now = new Date().getTime();
-        if (now - last &amp;gt; 1000 * 2) {
-            last = now;
-            count++;
-            console.log('the '+count+'th count');
-        }
-        if (count &amp;gt; 5) {
-            console.log('exist while.');
-            break;
-        }
-    }
-    
-}
-
-(function() {
-
-    setTimeout(function() {console.log('setTimeout 0 occured first.');},0);
-    setTimeout(function() {console.log('setTimeout 0 occured second.');},0);
-    
-    synchronizedCode();
-    
-})();
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;###输出结果
-	the 1th count.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;the 2th count.
-
-the 3th count.
-
-the 4th count.
-
-the 5th count.
-
-exist while.
-
-setTimeout 0 occured first.
-
-setTimeout 0 occured second.
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;使用setTimeout函数时，尽管延时为0，js的执行顺序还是发生了改变。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;##参考文件&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://echizen.github.io/tech/2016/03-05-asynchronous&quot;&gt;js中的异步执行时间探究&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://software.intel.com/zh-cn/articles/asynchronized-javascript-programming&quot;&gt;JavaScript异步编程&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://blog.whyun.com/posts/js/&quot;&gt;js异步之惑&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;22 Jul 2016&lt;/p&gt;
-</description>
-        <pubDate>Fri, 22 Jul 2016 00:00:00 +0800</pubDate>
-        <link>http://example.com/shanBlog/2016/07/22/js-asyn.html</link>
-        <guid isPermaLink="true">http://example.com/shanBlog/2016/07/22/js-asyn.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>markdown学习笔记（一）</title>
-        <description>&lt;p&gt;#my_note
-##html
-##css
-##javascript
-##jquery
-##html5
-##css3
-##es6
-###ol
-###react&lt;/p&gt;
-
-&lt;p&gt;st=&amp;gt;start: Start|past:&amp;gt;http://www.google.com[blank]
-e=&amp;gt;end: End:&amp;gt;http://www.google.com
-op1=&amp;gt;operation: My Operation|past
-op2=&amp;gt;operation: Stuff|current
-sub1=&amp;gt;subroutine: My Subroutine|invalid
-cond=&amp;gt;condition: Yes 
-or No?|approved:&amp;gt;http://www.baidu.com
-c2=&amp;gt;condition: Good idea|rejected
-io=&amp;gt;inputoutput: catch something…|request&lt;/p&gt;
-
-&lt;p&gt;st-&amp;gt;op1(right)-&amp;gt;cond
-cond(yes, right)-&amp;gt;c2
-cond(no)-&amp;gt;sub1(left)-&amp;gt;op1
-c2(yes)-&amp;gt;io-&amp;gt;e
-c2(no)-&amp;gt;op2-&amp;gt;e&lt;/p&gt;
-
-&lt;h1 id=&quot;a-first-level-header&quot;&gt;A first Level Header&lt;/h1&gt;
-&lt;p&gt;B second level header
-——————-&lt;/p&gt;
-
-&lt;p&gt;Now is the time
-conment to&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;this is a blockquite&lt;/p&gt;
-  &lt;h2 id=&quot;this-is-an-h2-in-ablockquote&quot;&gt;This is an H2 in ablockquote&lt;/h2&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Some of these worlds &lt;em&gt;are emphasized&lt;/em&gt;.
-Some of these worlds &lt;em&gt;are also&lt;/em&gt;.
-use two for &lt;strong&gt;strong&lt;/strong&gt;.
-use two for &lt;strong&gt;use two ubderscrores instead&lt;/strong&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;ul&quot;&gt;###ul&lt;/h2&gt;
-&lt;p&gt;上面的是一条分割线&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;li&lt;/li&gt;
-  &lt;li&gt;li&lt;/li&gt;
-  &lt;li&gt;li&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;两个列表之间不能响铃，不然会被解释为嵌套&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;li&lt;/li&gt;
-  &lt;li&gt;i&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;li&lt;/p&gt;
+  &lt;li&gt;&lt;a href=&quot;http://zhishan33.github.io/shanBlog/&quot;&gt;首页&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://juejin.im/post/5be2dd8fe51d451bb447e0a5?utm_source=gold_browser_extension&quot;&gt;CSS 来实现多行文字截断&lt;/a&gt;
+    &lt;blockquote&gt;
+      &lt;p&gt;12 Nov 2018&lt;/p&gt;
+    &lt;/blockquote&gt;
   &lt;/li&gt;
-  &lt;li&gt;li&lt;/li&gt;
-  &lt;li&gt;li&lt;/li&gt;
-  &lt;li&gt;li&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Mon, 12 Nov 2018 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/shanBlog/2018/11/12/more-line-text.html</link>
+        <guid isPermaLink="true">http://localhost:4000/shanBlog/2018/11/12/more-line-text.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>git test</title>
+        <description>&lt;h1 id=&quot;gittest&quot;&gt;gittest&lt;/h1&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;03 Apr 2018&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+        <pubDate>Tue, 03 Apr 2018 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/shanBlog/2018/04/03/gittest.html</link>
+        <guid isPermaLink="true">http://localhost:4000/shanBlog/2018/04/03/gittest.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>java 多线程</title>
+        <description>&lt;h1 id=&quot;test&quot;&gt;test&lt;/h1&gt;
+
+&lt;p&gt;02 Apr 2018&lt;/p&gt;
+</description>
+        <pubDate>Mon, 02 Apr 2018 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/shanBlog/2018/04/02/test.html</link>
+        <guid isPermaLink="true">http://localhost:4000/shanBlog/2018/04/02/test.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>learn react</title>
+        <description>&lt;h1 id=&quot;react--react-router-dom--mobx-小实验&quot;&gt;react + react-router-dom + mobx (小实验)&lt;/h1&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;小实验&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+  class Ele extends React.Component {
+    contruct(props){
+      this.state = {}
+    }
+  } 
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;小实验&quot;&gt;小实验&lt;/h1&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+  class Ele extends React.Component {
+    contruct(props){
+      this.state = {}
+    }
+  } 
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;相关链接&quot;&gt;相关链接&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://zhishan33.github.io/shanBlog/&quot;&gt;首页&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://zhishan33.github.io/shanBlog/scripts/js_asyn.html&quot;&gt;异步实验&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://zhishan33.github.io/shanBlog/scripts/index.html&quot;&gt;react实验&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;###ol&lt;/p&gt;
+&lt;p&gt;30 Mar 2018&lt;/p&gt;
+</description>
+        <pubDate>Fri, 30 Mar 2018 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/shanBlog/2018/03/30/learn-react.html</link>
+        <guid isPermaLink="true">http://localhost:4000/shanBlog/2018/03/30/learn-react.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>select元素的之右对齐</title>
+        <description>&lt;h1 id=&quot;text-align-last-描述的是一段文本中最后一行包括块内仅有一行文本的情况这时既是第一行也是最后一行在被强制换行之前的对齐规则&quot;&gt;text-align-last (描述的是一段文本中最后一行[包括块内仅有一行文本的情况，这时既是第一行也是最后一行]在被强制换行之前的对齐规则)&lt;/h1&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;css的text-align-last&lt;/p&gt;
+&lt;/blockquote&gt;
 
 &lt;ol&gt;
-  &lt;li&gt;li&lt;/li&gt;
-  &lt;li&gt;il&lt;/li&gt;
-  &lt;li&gt;li&lt;/li&gt;
+  &lt;li&gt;text-align-last: auto;&lt;/li&gt;
+  &lt;li&gt;text-align-last: start;&lt;/li&gt;
+  &lt;li&gt;text-align-last: end;&lt;/li&gt;
+  &lt;li&gt;text-align-last: left;&lt;/li&gt;
+  &lt;li&gt;text-align-last: right;&lt;/li&gt;
+  &lt;li&gt;text-align-last: center;&lt;/li&gt;
+  &lt;li&gt;text-align-last: justify;&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;###p&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+  select {
+    text-align-last: right;
+  }
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;direction检索或设置文本流的方向&quot;&gt;direction(检索或设置文本流的方向)&lt;/h1&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+  select {
+    direction: rtl;
+  }
+  select option {
+    direction: ltr;
+  }
+  
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;css的direction&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;1.direction: ltr;
+2.direction: rtl;&lt;/p&gt;
+
+&lt;p&gt;3.direction: inherit;
+4.direction: initial;
+5.direction: unset;&lt;/p&gt;
+
+&lt;h2 id=&quot;相关链接&quot;&gt;相关链接&lt;/h2&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;li&lt;/p&gt;
-
-    &lt;p&gt;ppppppppppppp&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;li&lt;/p&gt;
-  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://zhishan33.github.io/shanBlog/&quot;&gt;首页&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;###link
-this is &lt;a href=&quot;www.example.com&quot;&gt;example link&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;03 Feb 2018&lt;/p&gt;
 
-&lt;p&gt;###link2
-i get 10 times more traffic from &lt;a href=&quot;http://google.com&quot;&gt;Google&lt;/a&gt; than from &lt;a href=&quot;http://search.com&quot;&gt;Yahoo&lt;/a&gt; or &lt;a href=&quot;http://search.msn.com&quot;&gt;MSN&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;###img
-&lt;img src=&quot;/path/to/img.jpg&quot; alt=&quot;alt text&quot; title=&quot;title&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;![alt text][id]
-[id]:/path/to/img.jpg ‘title’&lt;/p&gt;
-
-&lt;p&gt;###code
-I strongly recommend against using any &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;blink&amp;gt;&lt;/code&gt; tags.&lt;/p&gt;
-
-&lt;p&gt;###tab&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;p&amp;gt;for example&amp;lt;p&amp;gt;
-&amp;lt;blockquote&amp;gt;
-&amp;lt;p&amp;gt;foe example&amp;lt;/p&amp;gt;
-&amp;lt;/blockquote&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;##p&lt;/p&gt;
-&lt;hr /&gt;
-&lt;p&gt;这是一个段落&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;03 Feb 2018&lt;/p&gt;
+&lt;/blockquote&gt;
 </description>
-        <pubDate>Wed, 20 Jul 2016 00:00:00 +0800</pubDate>
-        <link>http://example.com/shanBlog/2016/07/20/my_notes.html</link>
-        <guid isPermaLink="true">http://example.com/shanBlog/2016/07/20/my_notes.html</guid>
+        <pubDate>Sat, 03 Feb 2018 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/shanBlog/2018/02/03/select-css.html</link>
+        <guid isPermaLink="true">http://localhost:4000/shanBlog/2018/02/03/select-css.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>java 多线程</title>
+        <description>&lt;h1 id=&quot;创建多线程&quot;&gt;创建多线程&lt;/h1&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;方法1、继承Thread类     方法2、待续&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;继承&quot;&gt;继承&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;继承Thread类&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;定义子类继承Thread类&lt;/li&gt;
+    &lt;li&gt;重写Thread类中的run方法，在run中定义要运行的代码&lt;/li&gt;
+    &lt;li&gt;通过Thread子类创建线程&lt;/li&gt;
+    &lt;li&gt;调用子类的start方法启动并运行线程（jvm会自动执行run）&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/blockquote&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+  class ChildThread extends Thread {
+    private String name;
+    ChildThread(String name){
+      this.name = name;
+    }
+
+    public void run(){
+      for(int i=0; i&amp;lt;10; i++){
+        System.out.println(name+&quot;******i=&quot;i);
+      }
+    }
+
+  }
+
+  class DemoThread {
+    public static void main(String[] args){
+      ChildThread childThread1 = new ChildThread(&quot;子线程1&quot;)；
+      ChildThread childThread2 = new ChildThread(&quot;子线程2&quot;)；
+
+      childThread1.start();
+      childThread2.start();
+    }
+  }
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;相关链接&quot;&gt;相关链接&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://zhishan33.github.io/shanBlog/&quot;&gt;首页&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;21 Jan 2018&lt;/p&gt;
+
+</description>
+        <pubDate>Sun, 21 Jan 2018 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/shanBlog/2018/01/21/java-thread.html</link>
+        <guid isPermaLink="true">http://localhost:4000/shanBlog/2018/01/21/java-thread.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>java 基础 异常</title>
+        <description>&lt;h1 id=&quot;异常分类&quot;&gt;异常分类&lt;/h1&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;1、编译异常     2、运行异常&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;关键字&quot;&gt;关键字&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;1、throw:用于抛出异常   2、throws： 用于声明异常&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  class ChildException extends Exception {
+    ChildException(){
+    }
+    ChildException(String name){
+      super(name);
+    }
+  }
+  
+  class Demo throws ChildException {
+    void func(){
+      throw new ChildException();
+    }
+  }
+  
+  class RunDemo {
+    public static void main(String[] args){
+      Demo d = new Demo();
+      
+      try{
+        d.func();
+      } catch(ChildException e){
+        e.getMessage();
+      } catch(Exception oe){
+        System.out.println(&quot;other exception&quot;);
+      }
+      
+    }
+  }
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;声明多个异常时，catch（Exception e）放最后；&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;相关链接&quot;&gt;相关链接&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://zhishan33.github.io/shanBlog/&quot;&gt;首页&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;09 Jan 2018&lt;/p&gt;
+
+</description>
+        <pubDate>Tue, 09 Jan 2018 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/shanBlog/2018/01/09/java-exception.html</link>
+        <guid isPermaLink="true">http://localhost:4000/shanBlog/2018/01/09/java-exception.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>java 基础 多肽</title>
+        <description>&lt;h1 id=&quot;多肽&quot;&gt;多肽&lt;/h1&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;多肽 对象 即属于子类 ， 也属于父类  对象 instance of Zi ; 对象 instance of Fu ;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  interface Fu {
+    int num = 3;
+    void show(){
+      sop(&quot;fu&quot;);
+    }
+    static void eat(){
+      sop(&quot;eat fu&quot;);
+    }
+  }
+  
+  class Zi extends Fu {
+    int num = 4;
+    void show(){
+      sop(&quot;zi&quot;)
+     }
+     static void eat(){
+      sop(&quot;eat zi&quot;);
+     }
+     void fun(){
+      sop(&quot;fun zi&quot;);
+     }
+  }
+  
+  class Zi2 extends Fu {
+    void fun1(){
+      sop(&quot;fun zi2&quot;);
+    }
+  }
+
+  Fu demo = new Zi();  //   类型提升
+  demo.num //3
+  demo.show() // zi
+  demo.eat(); //   eat fu   Fu.eat() 
+  
+  Zi d = (Zi)demo;   //  类型转换
+  d.fun(); // fun zi
+
+  Zi z = new Zi();
+  z.fun(); // fun zi
+  
+  
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;成员非静态方法： 编译时检查存不存在，不存在抛出异常；运行时调用实例化的类的方法；&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;相关链接&quot;&gt;相关链接&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://zhishan33.github.io/shanBlog/&quot;&gt;首页&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;30 Dec 2017&lt;/p&gt;
+
+</description>
+        <pubDate>Sat, 30 Dec 2017 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/shanBlog/2017/12/30/java-base.html</link>
+        <guid isPermaLink="true">http://localhost:4000/shanBlog/2017/12/30/java-base.html</guid>
         
         
       </item>

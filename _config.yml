@@ -62,7 +62,7 @@ links1:
     type:     other
     external: false
   - name:     正则
-    url:      /blo/reg
+    url:      /blog/reg
     type:     reg
     external: false
   - name:     git
