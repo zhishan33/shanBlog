@@ -34,7 +34,8 @@ baseurl: "/shanBlog" # the subpath of your site, e.g. /blog
 encoding: utf-8
 url: "https://zhishan33.github.io" # the base hostname & protocol for your site
 twitter_username: jekyllrb
-github_username:  zhishan33
+github_username:  jekyll
+#github_username:  zhishan33
 
 # Build settings
 markdown: kramdown
