@@ -47,7 +47,8 @@ markdown: kramdown
 #markdown: rdiscount
 # Markdown
 ## https://github.com/chjj/marked
-theme: jekyll-theme-cayman
+#theme: jekyll-theme-cayman
+theme: minima
 kramdown:
   input: GFM
 
