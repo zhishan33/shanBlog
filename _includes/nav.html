@@ -55,6 +55,21 @@
       </li>
       {% endfor %}
     </ol>
+    <!-- <h3>java</h3> -->
+  <!-- </ol> -->
+    <h3>正则表达式</h3>
+    <ol>
+
+      {% for post in site.tags.reg %}
+      <li>
+        <!-- { % for post in posts % } -->
+        <h3>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title | escape }}</a>
+        </h3>
+        <!-- { % endfor % } -->
+      </li>
+      {% endfor %}
+    </ol>
     <h3>java</h3>
     <ol>
 
