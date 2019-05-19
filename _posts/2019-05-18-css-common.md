@@ -30,22 +30,60 @@ tags: [css, css3]
 
 {% endhighlight %}
 
-- 从 nodejs 官网(https://nodejs.org/en/download/)下载 Linux Binaries (x64)源代码
-- 解压 node 源代码包
+
+## 2. 底部固定布局
+  + html
+```
+
+  <div class="model">
+    <div class="model__wrapper clearfix">
+      <div class="model__main">
+        lorem loremlorem loremlorem loremlorem loremlorem loremlorem loremlorem loremlorem lorem
+      </div>
+    </div>
+    <div class="model__bottom"> fixed bottom </div>
+  </div>
+
 
 ```
 
-  tar -xvf node-v10.15.3-linux-x64.tar.xz -C /media/home/application/
+  + scss
 
 ```
-
-## 2. 建立软连接
-
-```
-
-   sudo ln -s /media/home/application/node-v10.15.3-linux-x64/bin/node /usr/local/bin/node
-   sudo ln -s /media/home/application/node-v10.15.3-linux-x64/bin/npm /usr/local/bin/npm
-
+  .clearfix {
+    display: inline-block;
+  }
+  .clearfix::after {
+    content: " ";
+    display: block;
+    height: 0;
+    width: 100%;
+    clear: both;
+  }
+  .model {
+    position: fixed;
+    z-index: 9;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(7, 17, 27, 0.8);
+		overflow-y: auto;
+    &__wrapper {
+      min-height: 100%;
+      .model__main {
+        margin-top: 5rem;
+        padding-bottom: 5rem;
+      }
+    }
+    &__bottom {
+      position: relation;
+      width: 100%;
+      height: 2rem;
+      margin: -5rem auto 0 auto;
+      clear: both;
+    }
+  }
 
 ```
 
