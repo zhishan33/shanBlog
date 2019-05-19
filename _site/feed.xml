@@ -5,137 +5,9 @@
     <description>学习总结 思考感悟 知识管理</description>
     <link>http://localhost:4000/shanBlog/</link>
     <atom:link href="http://localhost:4000/shanBlog/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 19 May 2019 15:07:30 +0800</pubDate>
-    <lastBuildDate>Sun, 19 May 2019 15:07:30 +0800</lastBuildDate>
+    <pubDate>Sun, 19 May 2019 15:18:17 +0800</pubDate>
+    <lastBuildDate>Sun, 19 May 2019 15:18:17 +0800</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
-    
-      <item>
-        <title></title>
-        <description>&lt;h2 id=&quot;hbuilder-autoprefixer-预编译&quot;&gt;Hbuilder autoprefixer 预编译&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src=&quot;/shanBlog/images/Hbuilder_autoprefixer.png&quot; alt=&quot;autoprefixer config&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;尝试了好多次--c-configjson-都无效最后只好修改插件的indexjscusersadministratorappdataroamingnpmnode_modulesautoprefixernode_modulesbrowserslistindexjs文件的默认配置参数&quot;&gt;尝试了好多次 -c config.json 都无效。最后只好修改插件的index.js（C:\Users\Administrator\AppData\Roaming\npm\node_modules\autoprefixer\node_modules\browserslist\index.js）文件的默认配置参数&lt;/h3&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;	
-	// Default browsers query
-	//browserslist.defaults = [
-	//    '&amp;gt; 1%',
-	//    'last 2 versions',
-	//    'Firefox ESR'
-	//];
-	
-	// Default browsers query  from js
-	browserslist.defaults = [
-	    '&amp;gt; 0.5%',
-	    'last 5 versions',
-	//    'Firefox ESR'
-	];
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;相关链接&quot;&gt;相关链接&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://ask.dcloud.net.cn/article/691&quot;&gt;HBuilder中Autoprefixer的配置方法&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;19 May 2019&lt;/p&gt;
-</description>
-        <pubDate>Sun, 19 May 2019 15:07:30 +0800</pubDate>
-        <link>http://localhost:4000/shanBlog/2019/05/19/2017-03-09-Hbuilder-autoprefixer.html</link>
-        <guid isPermaLink="true">http://localhost:4000/shanBlog/2019/05/19/2017-03-09-Hbuilder-autoprefixer.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title></title>
-        <description>&lt;h2 id=&quot;添加和移除默认事件&quot;&gt;添加和移除默认事件&lt;/h2&gt;
-
-&lt;h3 id=&quot;epreventdefault&quot;&gt;e.preventDefault()&lt;/h3&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;	&amp;lt;script&amp;gt;
-		/*
-		 * 默认事件函数函数表达式
-		 */
-		var preEvent = function(e){e.preventDefault();}
-		
-		var myScroll;
-        function Loaded() {
-            myScroll = new IScroll('#wrapper', {
-                mouseWheel: true,
-                snap: true, //执行传送带效果
-                click: true,
-                taps: true
-            });
-        }
-		document.addEventListener('touchmove', preEvent, false);
-		/*
-		 * 数据成功后，调用方法。
-		 */
-		
-		Loaded();
-		
-		/*
-		 * 退出后，移除监听事件，清楚内存占用。
-		 */
-		
-		document.removeEventListener('touchmove', preEvent, false);
-		myScroll = null;
-	&amp;lt;/script&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;异步加载&quot;&gt;异步加载&lt;/h2&gt;
-
-&lt;h3 id=&quot;myscrollrefresh&quot;&gt;myScroll.refresh();&lt;/h3&gt;
-
-&lt;h2 id=&quot;css3&quot;&gt;css3&lt;/h2&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;	&amp;lt;style type=&quot;text/css&quot;&amp;gt;
-		#Wrapper {
-			touch-action:none;
-		}
-	&amp;lt;/style&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;相关链接&quot;&gt;相关链接&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://iiunknown.gitbooks.io/iscroll-5-api-cn/content/&quot;&gt;iScroll 5 API 中文版&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;19 May 2019&lt;/p&gt;
-</description>
-        <pubDate>Sun, 19 May 2019 15:07:30 +0800</pubDate>
-        <link>http://localhost:4000/shanBlog/2019/05/19/2017-03-02-iscroll-notes.html</link>
-        <guid isPermaLink="true">http://localhost:4000/shanBlog/2019/05/19/2017-03-02-iscroll-notes.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title></title>
-        <description>&lt;h2 id=&quot;正则表达式之中括号a-z&quot;&gt;正则表达式之中括号[A-z]&lt;/h2&gt;
-
-&lt;h3 id=&quot;a-z&quot;&gt;[A-z]&lt;/h3&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;方括号范围字符查找 &lt;strong&gt;[A-z]&lt;/strong&gt;不仅能够匹配a-z和A-Z还会匹配[]^_.这6个ASCII表中的091到096之间的字符,因此&lt;strong&gt;[A-z]&lt;/strong&gt;对应到ASCII表的065到122之间的字符而非正真的大小写字母，要匹配字母大小写规则&lt;strong&gt;[a-zA-Z]&lt;/strong&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;	&amp;lt;script&amp;gt;
-		var str = &quot;[\]^_·;
-		var result = /^[A-z]$/.test(str) // true;
-		var result2 = /^[a-zA-Z]$/.test(str) // false;
-	&amp;lt;/script&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;19 May 2019&lt;/p&gt;
-</description>
-        <pubDate>Sun, 19 May 2019 15:07:30 +0800</pubDate>
-        <link>http://localhost:4000/shanBlog/2019/05/19/2016-12-20-regexp.html</link>
-        <guid isPermaLink="true">http://localhost:4000/shanBlog/2019/05/19/2016-12-20-regexp.html</guid>
-        
-        
-      </item>
     
       <item>
         <title>css 通用设置</title>
@@ -588,6 +460,204 @@ git push --tags
         <guid isPermaLink="true">http://localhost:4000/shanBlog/2018/03/30/learn-react.html</guid>
         
         <category>js react</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>select元素的之右对齐</title>
+        <description>&lt;h1 id=&quot;text-align-last-描述的是一段文本中最后一行包括块内仅有一行文本的情况这时既是第一行也是最后一行在被强制换行之前的对齐规则&quot;&gt;text-align-last (描述的是一段文本中最后一行[包括块内仅有一行文本的情况，这时既是第一行也是最后一行]在被强制换行之前的对齐规则)&lt;/h1&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;css的text-align-last&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;text-align-last: auto;&lt;/li&gt;
+  &lt;li&gt;text-align-last: start;&lt;/li&gt;
+  &lt;li&gt;text-align-last: end;&lt;/li&gt;
+  &lt;li&gt;text-align-last: left;&lt;/li&gt;
+  &lt;li&gt;text-align-last: right;&lt;/li&gt;
+  &lt;li&gt;text-align-last: center;&lt;/li&gt;
+  &lt;li&gt;text-align-last: justify;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+  select {
+    text-align-last: right;
+  }
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;direction检索或设置文本流的方向&quot;&gt;direction(检索或设置文本流的方向)&lt;/h1&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+  select {
+    direction: rtl;
+  }
+  select option {
+    direction: ltr;
+  }
+  
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;css的direction&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;1.direction: ltr;
+2.direction: rtl;&lt;/p&gt;
+
+&lt;p&gt;3.direction: inherit;
+4.direction: initial;
+5.direction: unset;&lt;/p&gt;
+
+&lt;h2 id=&quot;相关链接&quot;&gt;相关链接&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://zhishan33.github.io/shanBlog/&quot;&gt;首页&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;03 Feb 2018&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;03 Feb 2018&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+        <pubDate>Sat, 03 Feb 2018 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/shanBlog/2018/02/03/select-css.html</link>
+        <guid isPermaLink="true">http://localhost:4000/shanBlog/2018/02/03/select-css.html</guid>
+        
+        <category>css</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>java 多线程</title>
+        <description>&lt;h1 id=&quot;创建多线程&quot;&gt;创建多线程&lt;/h1&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;方法1、继承Thread类     方法2、待续&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;继承&quot;&gt;继承&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;继承Thread类&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;定义子类继承Thread类&lt;/li&gt;
+    &lt;li&gt;重写Thread类中的run方法，在run中定义要运行的代码&lt;/li&gt;
+    &lt;li&gt;通过Thread子类创建线程&lt;/li&gt;
+    &lt;li&gt;调用子类的start方法启动并运行线程（jvm会自动执行run）&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/blockquote&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+  class ChildThread extends Thread {
+    private String name;
+    ChildThread(String name){
+      this.name = name;
+    }
+
+    public void run(){
+      for(int i=0; i&amp;lt;10; i++){
+        System.out.println(name+&quot;******i=&quot;i);
+      }
+    }
+
+  }
+
+  class DemoThread {
+    public static void main(String[] args){
+      ChildThread childThread1 = new ChildThread(&quot;子线程1&quot;)；
+      ChildThread childThread2 = new ChildThread(&quot;子线程2&quot;)；
+
+      childThread1.start();
+      childThread2.start();
+    }
+  }
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;相关链接&quot;&gt;相关链接&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://zhishan33.github.io/shanBlog/&quot;&gt;首页&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;21 Jan 2018&lt;/p&gt;
+
+</description>
+        <pubDate>Sun, 21 Jan 2018 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/shanBlog/2018/01/21/java-thread.html</link>
+        <guid isPermaLink="true">http://localhost:4000/shanBlog/2018/01/21/java-thread.html</guid>
+        
+        <category>java</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>java 基础 异常</title>
+        <description>&lt;h1 id=&quot;异常分类&quot;&gt;异常分类&lt;/h1&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;1、编译异常     2、运行异常&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;关键字&quot;&gt;关键字&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;1、throw:用于抛出异常   2、throws： 用于声明异常&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  class ChildException extends Exception {
+    ChildException(){
+    }
+    ChildException(String name){
+      super(name);
+    }
+  }
+  
+  class Demo throws ChildException {
+    void func(){
+      throw new ChildException();
+    }
+  }
+  
+  class RunDemo {
+    public static void main(String[] args){
+      Demo d = new Demo();
+      
+      try{
+        d.func();
+      } catch(ChildException e){
+        e.getMessage();
+      } catch(Exception oe){
+        System.out.println(&quot;other exception&quot;);
+      }
+      
+    }
+  }
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;声明多个异常时，catch（Exception e）放最后；&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;相关链接&quot;&gt;相关链接&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://zhishan33.github.io/shanBlog/&quot;&gt;首页&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;09 Jan 2018&lt;/p&gt;
+
+</description>
+        <pubDate>Tue, 09 Jan 2018 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/shanBlog/2018/01/09/java-exception.html</link>
+        <guid isPermaLink="true">http://localhost:4000/shanBlog/2018/01/09/java-exception.html</guid>
+        
+        <category>java</category>
         
         
       </item>
