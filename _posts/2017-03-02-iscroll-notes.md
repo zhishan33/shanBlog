@@ -1,6 +1,7 @@
 ---
 layout: default
 title: iscroll notes
+tags:[other]
 ---
 ## 添加和移除默认事件
 

@@ -1,6 +1,7 @@
 ---
 layout: default
 title: markdown学习笔记（二）
+tags: [other]
 ---
 # 欢迎使用马克飞象
 

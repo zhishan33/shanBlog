@@ -1,0 +1,87 @@
+<nav>
+  <label>
+    <input type="checkbox" name="icon">
+    <span icon-arrow-left="&lt;" icon-arrow-right="&gt;"></span>
+  <article>
+    <h3>vue</h3>
+    <ol>
+      <li>
+        {% for post in site.tags.vue %}
+        <!-- { % for post in posts % } -->
+        <h3>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title | escape }}</a>
+        </h3>
+        <!-- { % endfor % } -->
+      </li>
+      {% endfor %}
+
+    </ol>
+    <h3>git</h3>
+    <ol>
+
+      {% for post in site.tags.git %}
+      <li>
+        <!-- { % for post in posts % } -->
+        <h3>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title | escape }}</a>
+        </h3>
+        <!-- { % endfor % } -->
+      </li>
+      {% endfor %}
+    </ol>
+    <h3>css</h3>
+    <ol>
+
+      {% for post in site.tags.css %}
+      <li>
+        <!-- { % for post in posts % } -->
+        <h3>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title | escape }}</a>
+        </h3>
+        <!-- { % endfor % } -->
+      </li>
+      {% endfor %}
+    </ol>
+    <h3>javascript</h3>
+    <ol>
+
+      {% for post in site.tags.js %}
+      <li>
+        <!-- { % for post in posts % } -->
+        <h3>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title | escape }}</a>
+        </h3>
+        <!-- { % endfor % } -->
+      </li>
+      {% endfor %}
+    </ol>
+    <h3>java</h3>
+    <ol>
+
+      {% for post in site.tags.java %}
+      <li>
+        <!-- { % for post in posts % } -->
+        <h3>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title | escape }}</a>
+        </h3>
+        <!-- { % endfor % } -->
+      </li>
+      {% endfor %}
+    </ol>
+    <h3>other</h3>
+    <ol>
+
+      {% for post in site.tags.other %}
+      <li>
+        <!-- { % for post in posts % } -->
+        <h3>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title | escape }}</a>
+        </h3>
+        <!-- { % endfor % } -->
+      </li>
+      {% endfor %}
+    </ol>
+  </article>
+</label>
+
+</nav>

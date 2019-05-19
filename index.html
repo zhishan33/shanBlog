@@ -18,6 +18,34 @@ date: 2016 2016-03-16 +0800
 	<a href="https://github.com/zhishan33/shanBlog/tarball/master" class="btn">Download .tar.gz</a>
 </section>-->
 <div class="home">
+
+		<section>
+			----
+				{% for link in site.links1 %}
+					{% assign count = 0 %}
+					{% if link.type == site.blog_1 %}
+						{% for post in site.posts %}
+							{% assign count = count | plus: 1 %}
+						{% endfor %}
+					{% endif %}
+			
+					{% if link.type == site.blog_2 %}
+						{% for post in site.posts %}
+							{% if post.other %}
+								{% assign count = count | plus: 1 %}
+							{% endif %}
+						{% endfor %}
+					{% endif %}
+				{% endfor %}
+			
+				{% for post in site.tags.Vue %} 
+					<!-- { % for post in posts % } -->
+					<h3>
+							<a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title | escape }}</a>
+						</h3>
+					<!-- { % endfor % } -->
+				{% endfor %}
+			</section>
 	<!--<p>{{ page.title }}</p>-->
 	<!--<h1 class="page-heading">Posts</h1>-->
 	<!--<h1 class="page-heading">最新文章</h1>-->

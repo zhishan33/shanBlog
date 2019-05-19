@@ -1,6 +1,7 @@
 ---
 layout: default
 title: select元素的之右对齐
+tags: [css]
 ---
 
 # text-align-last (描述的是一段文本中最后一行[包括块内仅有一行文本的情况，这时既是第一行也是最后一行]在被强制换行之前的对齐规则)

@@ -1,6 +1,7 @@
 ---
 layout: default
 title: java 基础 继承 接口
+tags: [java]
 ---
 
 # extends

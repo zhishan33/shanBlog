@@ -3,7 +3,7 @@ layout: default
 title: ubuntu下安装vue-cli
 date: 2019-05-16 +0800
 categories: vue
-tags: [Vue, Ubuntu]
+tags: [vue, ubuntu]
 ---
 
 # Ubuntu 下如何安装 vue-cli

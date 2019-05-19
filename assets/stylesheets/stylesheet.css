@@ -8,7 +8,102 @@ body {
   font-size: 16px;
   line-height: 1.5;
   color: #606c71; }
+nav {
+  display: inline;
+}
 
+nav span {
+  position: fixed;
+  padding: 1.3rem 0.3rem;
+  background-color: lightgrey;
+  border-bottom-right-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  cursor: pointer;
+}
+nav span::before {
+  content: attr(icon-arrow-right);
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 1.3rem 0.3rem;
+  background-color: lightgrey;
+  border-bottom-right-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  cursor: pointer;
+}
+nav span::after {
+  display: none;
+  content: attr(icon-arrow-left);
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 1.3rem 0.3rem;
+  background-color: lightgrey;
+  border-bottom-right-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  cursor: pointer;
+}
+nav input {
+  position: absolute;
+  width: 0;
+  height: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 0;
+  line-height: 0;
+  opacity: 0;
+  vertical-align: middle;
+  float: left;
+}
+nav input + span + article {
+  transform: translateX(-120%);
+  transition: all 0.5s ease-in;
+
+}
+nav input:checked + span::before {
+  display: none;
+}
+nav input:checked + span::after {
+  display: inline-block;
+}
+nav input:checked + span + article {
+  transform: translateX(0);
+
+  transition: all 0.5s ease-out;
+}
+nav article {
+  padding: 1%;
+  /* margin-top: 2%; */
+  position: fixed;
+  bottom: 10%;
+  top: 15%;
+  left: 2%;
+  width: 18%;
+  min-height: 40rem;
+  max-height: 50rem;
+  background-color: #eee;
+  box-shadow: 0 0 8px grey;
+  border-radius: 1rem;
+  overflow-y: auto;
+}
+nav article h3 {
+  margin: 0;
+  padding: 0;
+}
+nav article ol {
+  margin: 0;
+}
+nav article li {
+  margin: 0;
+  padding: 0;
+}
+nav article li a {
+  /* display: inline-block; */
+  text-overflow: ellipsis;
+  /* height: 1.5em; */
+  /* overflow: hidden; */
+}
 a {
   color: #1e6bb8;
   text-decoration: none; }
@@ -33,7 +128,12 @@ a {
   text-decoration: none;
   background-color: rgba(255, 255, 255, 0.2);
   border-color: rgba(255, 255, 255, 0.3); }
+@media screen and (max-width: 90em){
 
+  nav {
+    display: none;
+  }
+}
 @media screen and (min-width: 64em) {
   .btn {
     padding: 0.75rem 1rem; } }

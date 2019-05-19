@@ -1,6 +1,7 @@
 ---
 layout: default
 title: js validation
+tags: [reg]
 ---
  
 

@@ -1,6 +1,7 @@
 ---
 layout: default
 title: flex notes
+tags: [css, flex]
 ---
  
 

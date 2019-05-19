@@ -1,6 +1,7 @@
 ---
 layout: default
 title: java 基础 异常
+tags: [java]
 ---
 
 # 异常分类

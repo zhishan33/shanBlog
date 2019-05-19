@@ -1,6 +1,7 @@
 ---
 layout: default
 title: java 多线程
+tags: [java]
 ---
 
 # 创建多线程
