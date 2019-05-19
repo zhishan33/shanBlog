@@ -12,32 +12,37 @@ tags: [css, css3]
 
 + 视网膜屏下的像素设置（1px 像素问题）
 
+			{% highlight ruby %}
 
-   {% highlight ruby %}
-	 
-       .border {
-				 border: 1px solid #999;
+			.border {
+				border: 1px solid #999;
 			}
-       @media screen and (min-device-pixel-ratio:1.5) {
-         //.border {border: 0.7px solid #999;}
-          .border {
-						transform:scaleY(0.7);
-				  }
-       }
-       @media screen and (min-device-pixel-ratio:2) {
-         //.border {border: 0.5px solid #999;}
-          .border {
-						transform:scaleY(0.5);
-					}
-       }
-       @media screen and (min-device-pixel-ratio:3) {
-         //.border {border: 0.33333px solid #999;}
-					.border {
-						transform:scaleY(0.33333);
-					}
-       }
 
-{% endhighlight %}
+			@media screen and (min-device-pixel-ratio:1.5) {
+
+				//.border {border: 0.7px solid #999;}
+				.border {
+					transform: scaleY(0.7);
+				}
+			}
+
+			@media screen and (min-device-pixel-ratio:2) {
+
+				//.border {border: 0.5px solid #999;}
+				.border {
+					transform: scaleY(0.5);
+				}
+			}
+
+			@media screen and (min-device-pixel-ratio:3) {
+
+				//.border {border: 0.33333px solid #999;}
+				.border {
+					transform: scaleY(0.33333);
+				}
+			}
+
+			{% endhighlight %}
 
 
 ## 2. 底部固定布局
