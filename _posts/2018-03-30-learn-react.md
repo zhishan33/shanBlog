@@ -1,7 +1,7 @@
 ---
 layout: default
 title: learn react
-tags: [js react]
+tags: [js, react]
 ---
 # react + react-router-dom + mobx (小实验)
 

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: webpack config
-tags: [webpack]
+tags: [js, webpack]
 ---
 ### Welcome webpack config
 
