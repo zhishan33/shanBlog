@@ -83,6 +83,19 @@
       </li>
       {% endfor %}
     </ol>
+    <h3>vim</h3>
+    <ol>
+
+      {% for post in site.tags.vim %}
+      <li>
+        <!-- { % for post in posts % } -->
+        <h3>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title | escape }}</a>
+        </h3>
+        <!-- { % endfor % } -->
+      </li>
+      {% endfor %}
+    </ol>
     <h3>other</h3>
     <ol>
 
