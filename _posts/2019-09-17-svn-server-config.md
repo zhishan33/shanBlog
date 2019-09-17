@@ -118,7 +118,8 @@ tags: [svn, config]
 
 ### 同步文件到web服务器
 * copy d:/svn/app/shop/hooks/post-commit.tmpl d:/svn/app/shop/hooks/post-commit.bat
-* post-commit.bat 
+
+> the post-commit.bat content is as follows
 
 ```
   SET SVN="D:/svn/server/bin/svn.exe"
