@@ -53,6 +53,14 @@ docker build -t my-nginx .
 docker run -d --rm -p 4445:80 my-nginx
 ```
 
+## add date(2019-10-21)
+
+### 运行容器终端
+
+```bash
+docker exec -ti containerName /bin/bash
+```
+
 ## 相关链接
 
 * [首页](https://zhishan33.github.io/shanBlog/)
