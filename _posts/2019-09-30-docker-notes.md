@@ -55,6 +55,19 @@ docker run -d --rm -p 4445:80 my-nginx
 
 ## add date(2019-10-21)
 
+### 命令 --link **网络并入**
+
+```bash
+docker run -p 3306:3306 --name mymysql -v $PWD/conf:/etc/mysql/conf.d -v $PWD/logs:/logs -v $PWD/data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=123456 -d mysql:5.6
+docker run --name my-php -v E:/project/docker/nginx/www:/www -d php:5.6-fpm
+
+docker run --name my-nginx-php -p 80:80 -d -v E:/project/docker/nginx/www:/usr/share/nginx/html:ro -v E:/project/docker/nginx/conf.d:/etc/nginx/conf.d:ro --link my-php:php nginx
+
+docker run --name my-mysql-php -p 3306:3306 -d -v E:/project/docker/mysql/conf:/etc/mysql -v E:/project/docker/mysql/logs:/logs -v E:/project/docker/mysql/data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=root --link my-php mysql:5.6
+
+docker run --name my-phpmyadmin -p 8080:80 --link my-mysql-php:db -d phpmyadmin/phpmyadmin:latest
+```
+
 ### 运行容器终端
 
 ```bash
