@@ -66,6 +66,9 @@ docker run --name my-nginx-php -p 80:80 -d -v E:/project/docker/nginx/www:/usr/s
 docker run --name my-mysql-php -p 3306:3306 -d -v E:/project/docker/mysql/conf:/etc/mysql -v E:/project/docker/mysql/logs:/logs -v E:/project/docker/mysql/data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=root --link my-php mysql:5.6
 
 docker run --name my-phpmyadmin -p 8080:80 --link my-mysql-php:db -d phpmyadmin/phpmyadmin:latest
+
+docker run -d --name myadmin -e PMA_HOST=$(ip route show | grep docker0 | awk '{print $9}') -e PMA_PORT=3306 -p 8080:80 phpmyadmin/phpmyadmin
+
 ```
 
 ### 运行容器终端
@@ -73,6 +76,10 @@ docker run --name my-phpmyadmin -p 8080:80 --link my-mysql-php:db -d phpmyadmin/
 ```bash
 docker exec -ti containerName /bin/bash
 ```
+
+### 安装vim
+1. apt-get update
+2. apt-get install vim
 
 ## 相关链接
 
