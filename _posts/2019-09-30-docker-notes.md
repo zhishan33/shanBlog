@@ -61,7 +61,11 @@ docker run -d --rm -p 4445:80 my-nginx
 docker run -p 3306:3306 --name mymysql -v $PWD/conf:/etc/mysql/conf.d -v $PWD/logs:/logs -v $PWD/data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=123456 -d mysql:5.6
 docker run --name my-php -v E:/project/docker/nginx/www:/www -d php:5.6-fpm
 
+docker run --name my-nginx-php -p 80:80 -d -v E:/project/nginx/www:/usr/share/nginx/html:ro -v E:/project/nginx/conf.d:/etc/nginx/conf.d:ro -v E:/project/nginx/logs:/logs:ro --link my-php:php nginx
+
 docker run --name my-nginx-php -p 80:80 -d -v E:/project/docker/nginx/www:/usr/share/nginx/html:ro -v E:/project/docker/nginx/conf.d:/etc/nginx/conf.d:ro --link my-php:php nginx
+
+docker run --name my-mysql-php -p 3306:3306 -d -v E:/project/mysql/conf:/etc/mysql -v E:/project/mysql/logs:/logs -v E:/project/mysql/data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=root --link my-php mysql:5.6
 
 docker run --name my-mysql-php -p 3306:3306 -d -v E:/project/docker/mysql/conf:/etc/mysql -v E:/project/docker/mysql/logs:/logs -v E:/project/docker/mysql/data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=root --link my-php mysql:5.6
 
