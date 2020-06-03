@@ -23,6 +23,7 @@ vim /usr/share/applications/whecat_web_devtools.desktop
 ```
 
 3. 修改文件内容
+
 ```shell
    [Desktop Entry]
    Version=v1.02.1910121
