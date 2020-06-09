@@ -38,3 +38,10 @@ vim /usr/share/applications/whecat_web_devtools.desktop
    Comment=wechat_web_devtools
 
 ```
+
+
+## 相关链接
+
+* [首页](https://zhishan33.github.io/shanBlog/)
+
+> {{page.date | date: '%Y, %b %d' }}
