@@ -21,6 +21,7 @@ sudo blkid
 ```
 
 3. 编辑/etc/fstab文件**在文件最后一行添加UUID=0E12A07812A06705 /media/home/apps               ntfs    errors=defaults 0       0**
+> UUID和tpye换上然后在/后面加上**要挂载路径**，把errors=remount-ro改为defaults，后面的1改0
 
 ```shell
 sudo gedit /etc/fstab
