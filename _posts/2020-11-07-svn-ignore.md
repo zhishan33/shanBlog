@@ -23,10 +23,11 @@ $ svn ci -m 'Ignoring a directory called "spool".'
 𝑠𝑣𝑛𝑒𝑥𝑝𝑜𝑟𝑡𝑠𝑝𝑜𝑜𝑙𝑠𝑝𝑜𝑜𝑙−𝑡𝑚𝑝 svn rm spool
 𝑠𝑣𝑛𝑐𝑖−𝑚′𝑅𝑒𝑚𝑜𝑣𝑖𝑛𝑔𝑖𝑛𝑎𝑑𝑣𝑒𝑟𝑡𝑒𝑛𝑡𝑙𝑦𝑎𝑑𝑑𝑒𝑑𝑑𝑖𝑟𝑒𝑐𝑡𝑜𝑟𝑦"𝑠𝑝𝑜𝑜𝑙".′ mv spool-tmp spool
 
-```
-$ svn propset svn:ignore 'spool' .
+```shell
 
-$ svn ci -m 'Ignoring a directory called "spool".'
+ svn propset svn:ignore 'spool' .
+
+ svn ci -m 'Ignoring a directory called "spool".'
 ```
  >
 
