@@ -1,7 +1,7 @@
 ---
 layout: default
 title: ESLint + Prettier | commitizen cz-conventional-changelog | husky
-date: 2020-11-07 +0800
+date: 2021-12-21 +0800
 categories:
 tags: [js, notes]
 ---
@@ -80,3 +80,9 @@ npx husky add .husky/commit-msg 'npx --no-install commitlint --edit "$1"'
 npm i @commitlint/{config-conventional,cli} -D
 echo "module.exports = {extends: ['@commitlint/config-conventional']}" > commitlint.config.js
 ```
+
+## 相关链接
+
+- [首页](https://zhishan33.github.io/shanBlog/)
+
+> {{page.date | date: '%Y, %b %d'}}

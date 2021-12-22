@@ -21,7 +21,7 @@ npm install -D husky
 }
 ```
 
-3. 添加git hooks，运行一下命令创建git hooks
+1. 添加git hooks，运行一下命令创建git hooks
 
 npx husky add .husky/pre-commit "npm run test"
 
@@ -55,10 +55,8 @@ module.exports = {
   }
 };
 
+ npx husky add .husky/commit-msg 'npx --no-install commitlint --edit "$1"'
 ```
-
-4. npx husky add .husky/commit-msg 'npx --no-install commitlint --edit "$1"'
-
 
 ## 相关链接
 
